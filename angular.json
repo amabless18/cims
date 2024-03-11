@@ -20,7 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo1",
+            "baseHref": "/cims-prod/",
+            "outputPath": "dist/cims",
             "allowedCommonJsDependencies": [
               "object-path",
               "apexcharts",
