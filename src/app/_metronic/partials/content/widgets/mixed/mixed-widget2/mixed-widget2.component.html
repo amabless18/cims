@@ -1,0 +1,56 @@
+<div class="card-header border-0 py-5" [ngClass]="'bg-' + chartColor">
+  <h3 class="card-title fw-bolder text-white"></h3>
+</div>
+<!-- end::Header -->
+<!-- begin::Body -->
+<div class="card-body p-0">
+  <!-- begin::Chart -->
+  <div
+    #chartRef
+    class="mixed-widget-2-chart card-rounded-bottom"
+    [ngClass]="'bg-' + chartColor"
+  >
+    
+  </div>
+  <!-- end::Chart -->
+  <!-- begin::Stats -->
+  <div class="card-p mt-n20 position-relative">
+    <!-- begin::Row -->
+    <div class="row g-0">
+      <!-- begin::Col -->
+      <div class="col bg-light-warning px-6 py-8 rounded-2 me-7 mb-7">
+        <span
+          [inlineSVG]="'./assets/media/icons/duotune/general/gen032.svg'"
+          class="svg-icon svg-icon-3x svg-icon-warning d-block my-2"
+        ></span>
+        <a href="/social" class="text-warning fw-bold fs-6"> Social </a>
+      </div>
+      <!-- end::Col -->
+      <!-- begin::Col -->
+      <div class="col bg-light-primary px-6 py-8 rounded-2 mb-7">
+        <span
+          [inlineSVG]="'./assets/media/icons/duotune/arrows/arr075.svg'"
+          class="svg-icon svg-icon-3x svg-icon-primary d-block my-2"
+        ></span>
+        <a href="/crafted/account/user" class="text-primary fw-bold fs-6"> Users </a>
+      </div>
+      <!-- end::Col -->
+    </div>
+    <!-- end::Row -->
+    <!-- begin::Row -->
+    <div class="row g-0">
+      <!-- begin::Col -->
+      <div class="col bg-light-danger px-6 py-8 rounded-2 me-7">
+        <span
+          [inlineSVG]="'./assets/media/icons/duotune/abstract/abs027.svg'"
+          class="svg-icon svg-icon-3x svg-icon-danger d-block my-2"
+        ></span>
+        <a href="/builder" class="text-danger fw-bold fs-6 mt-2"> Builder </a>
+      </div>
+      <!-- end::Col -->
+      <!-- begin::Col -->
+    </div>
+    <!-- end::Row -->
+  </div>
+  <!-- end::Stats -->
+</div>

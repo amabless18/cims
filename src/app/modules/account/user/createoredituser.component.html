@@ -1,0 +1,237 @@
+<div class="card">
+    <div class="card-body">
+        <form #myForm="ngForm" (ngSubmit)="InsertData()" class="container-fluid">
+            <div
+                class="card-header border-0 cursor-pointer"
+                role="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#kt_account_profile_details"
+                aria-expanded="true"
+                aria-controls="kt_account_profile_details"
+              >
+                <div class="card-title m-0">
+                  <h3 class="fw-bolder m-0">Profile Details</h3>
+                </div>
+              </div>
+              <div id="kt_account_profile_details" class="collapse show">
+                <div class="card-body border-top p-9">
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label fw-bold fs-6">Avatar</label>
+                    <div class="col-lg-8">
+                      <input type="file" name="pic" (change)="onFileChange($event)" accept="image/*" />
+                      <div class="image-input-wrapper w-125px h-125px" *ngIf="users.pic">
+                        <img [src]="users.pic" alt="Avatar" class="w-100 h-100" />
+                        <i class="bi bi-x-circle" (click)="removeImage()"></i>
+                      </div>
+                    </div>
+                  </div>                 
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >First Name</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.firstname"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="First name"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Middle Name</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.middlename"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="Middle name"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Last Name</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.lastname"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="Last name"
+                        name="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Email</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.email"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="email"
+                        name="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label fw-bold fs-6"
+                      ><span class="required">Password</span></label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.password"
+                        type="password"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="password"
+                        name="password"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label fw-bold fs-6"
+                      ><span class="required">Age</span></label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.age"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="age"
+                        name="age"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                      <label class="col-lg-4 col-form-label fw-bold fs-6"
+                        ><span class="required">Level</span></label
+                      >
+                      <div class="col-lg-8 fv-row">
+                        <input [(ngModel)]="users.level"
+                          type="text"
+                          class="form-control form-control-lg form-control-solid"
+                          placeholder="level"
+                          name="level"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-6">
+                      <label class="col-lg-4 col-form-label fw-bold fs-6"
+                        ><span class="required">Session Time</span></label
+                      >
+                      <div class="col-lg-8 fv-row">
+                        <input [(ngModel)]="users.session_time"
+                          type="time"
+                          class="form-control form-control-lg form-control-solid"
+                          placeholder="session time"
+                          name="session time"
+                        />
+                      </div>
+                    </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Roles</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <select [(ngModel)]="users.roles"
+                        class="form-select form-select-solid form-select-lg"
+                        name="roles"
+                      >
+                        <option value="">Select a Role...</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Coach">Coach</option>
+                        <option value="Student">Student</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Status</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <select [(ngModel)]="users.status"
+                        class="form-select form-select-solid form-select-lg"
+                        name="status"
+                      >
+                        <option value="">Select a Status...</option>
+                        <option value="Enrolled">Enrolled</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Graduated">Graduated</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Course</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <select [(ngModel)]="users.course"
+                        class="form-select form-select-solid form-select-lg"
+                        name="course"
+                      >
+                        <option value="">Select a Course...</option>
+                        <option value="Vocal Coaching">Vocal Coaching</option>
+                        <option value="Hip Hop">Hip Hop</option>
+                        <option value="Drums">Drums</option>
+                        <option value="Guitar">Guitar</option>
+                        <option value="Keyboard">Keyboard</option>
+                        <option value="Combat">Combat</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label fw-bold fs-6"
+                      ><span class="required">Coach Name</span></label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <input [(ngModel)]="users.coach_name"
+                        type="text"
+                        class="form-control form-control-lg form-control-solid"
+                        placeholder="coach name"
+                        name="coach name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                      >Branch</label
+                    >
+                    <div class="col-lg-8 fv-row">
+                      <select [(ngModel)]="users.branch"
+                        class="form-select form-select-solid form-select-lg"
+                        name="branches"
+                      >
+                        <option value="">Select a Branch...</option>
+                        <option value="General Santos City">General Santos City</option>
+                        <option value="Isulan">Isulan</option>
+                        <option value="Norala">Norala</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="card-footer d-flex justify-content-end py-6 px-9">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    [disabled]="isLoading"
+                
+                  >
+                    <ng-container *ngIf="!isLoading">Save Changes</ng-container>
+                    <ng-container *ngIf="isLoading">
+                      <span clas="indicator-progress" [style.display]="'block'">
+                        Please wait...{{ " " }}
+                        <span
+                          class="spinner-border spinner-border-sm align-middle ms-2"
+                        ></span>
+                      </span>
+                    </ng-container>
+                  </button>
+                  <button class="btn btn-danger" (click)="close()" type="button">Exit</button>
+                </div>
+              </div>
+          </form>
+    </div>
+</div>
+  

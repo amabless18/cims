@@ -1,0 +1,39 @@
+<!-- begin::Body -->
+<div>
+  <!-- begin::Header -->
+  <div *ngIf="user$ | async as _user">
+    <!-- begin::User -->
+    <div class="card-body pb-0 d-flex align-items-center mb-5 card border-transparent" data-bs-theme="light"
+      style="background-color: #1C325E;">
+      <div class="card-body d-flex ps-xl-15">
+        <div class="m-0">
+          <div class="position-relative fs-2x z-index-2 f2-bold text-white mb-7">
+            <div class="me-2" style="font-size: large;">
+              Dear, {{_user.firstname}}&nbsp;{{_user.lastname}} <br><br>
+              You successfully reserved your slot!
+<br><br>Thank you for choosing
+              <span class="position-relative d-inline-block text-danger">
+                Amabless Training Center!
+              </span>
+              <br>
+              for your music and arts training needs! We are thrilled to welcome you to our community of passionate learners. 
+              <br><br>
+              What to Expect:
+              <br><br>
+The enrollment schedule will be posted on facebook page. Our expert instructors are committed to providing you with an enriching and enjoyable learning experience!
+              <br><br>
+              <a class="btn btn-danger" href="https://www.facebook.com/profile.php?id=100077041684390">GenSan Branch Facebook Page</a><br><br>
+              <a class="btn btn-danger" href="https://www.facebook.com/profile.php?id=100067653986654">Isulan Branch Facebook Page</a><br><br>
+              <a class="btn btn-danger" href="https://www.facebook.com/CMAMABLESS?mibextid=ZbWKwL">Norala Branch Facebook Page</a>
+            </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- end::User -->
+    </div>
+    <!-- end::Header -->
+
+    <!-- begin::Post -->
+    <!-- end::Body -->

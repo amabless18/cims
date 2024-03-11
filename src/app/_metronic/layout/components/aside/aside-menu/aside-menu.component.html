@@ -1,0 +1,349 @@
+
+<div class="menu-item" *ngIf="user$ | async as _user">
+  <a *ngIf="_user.status === 'Enrolled'"
+    class="menu-link without-sub"
+    routerLink="/dashboard"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/art/art002.svg'"
+        class="svg-icon svg-icon-2"
+      ></span>
+    </span>
+    <span class="menu-title" translate="MENU.DASHBOARD"></span
+  ></a>
+</div>
+
+<!-- Layout builder -->
+<div class="menu-item" *ngIf="user$ | async as _user">
+  <a *ngIf="_user.userType === 'Admin'"
+    class="menu-link without-sub"
+    routerLink="/builder"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
+        class="svg-icon svg-icon-2"
+      ></span> </span
+    ><span class="menu-title">Layout Builder</span></a
+  >
+  <a 
+    class="menu-link without-sub"
+    routerLink="/social"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/general/gen020.svg'"
+        class="svg-icon svg-icon-2"
+      ></span> </span
+    ><span class="menu-title">Social</span></a
+  >
+</div>
+<!-- Separator -->
+<div class="menu-item" *ngIf="user$ | async as _user">
+  <div class="menu-content pt-8 pb-2" *ngIf="_user.userType === 'Admin'">
+    <span class="menu-section text-muted text-uppercase fs-8 ls-1"
+      >Assets</span
+    >
+  </div>
+</div>
+<!-- Pages -->
+
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin'"
+  class="menu-item menu-accordion" 
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  
+  
+</div>
+</div>
+
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link" 
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/communication/com012.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="crafted/account/user-profile">Modules</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/courses/coaches"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Coaches</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/courses/students"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Students</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/courses/evaluation"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Evaluation</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Components -->
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin' || _user.userType === 'Coach'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/communication/com007.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="crafted/pages/credentials/">Credentials</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/credentials/courses"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Courses</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/credentials/branches"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Branches</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Components -->
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin' || _user.userType === 'Coach'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/communication/com009.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="crafted/pages/courses/">Inquiries</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/inquiries/enrollment"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Enrollment</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/pages/inquiries/employment"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Employment</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Accounts -->
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin' || _user.userType === 'Coach'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/communication/com006.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="/crafted/account">Accounts</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/account/user"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Users</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Widgets -->
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.userType === 'Admin'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/general/gen025.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="/crafted/widgets">Widgets</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/lists"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Lists</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/statistics"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Statistics</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/charts"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Charts</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a 
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/mixed"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Mixed</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/tables"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Tables</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/widgets/feeds"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Feeds</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Separator -->
+<div *ngIf="user$ | async as _user">
+  <div class="menu-item" *ngIf="_user.status === 'Enrolled'">
+    <div class="menu-content pt-8 pb-2">
+      <span class="menu-section text-muted text-uppercase fs-8 ls-1">Profile</span>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="user$ | async as _user">
+  <div *ngIf="_user.status === 'Enrolled'"
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/communication/com012.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="crafted/account/user-profile">Profile Details</span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/account/user-profile"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">User Profile</span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="crafted/account/user-profile/overview"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title">Overview</span></a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Separator -->
+<div class="menu-item">
+  <div class="menu-content">
+    <div class="separator mx-1 my-4"></div>
+  </div>
+</div>
+

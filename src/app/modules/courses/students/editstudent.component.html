@@ -1,0 +1,183 @@
+<div class="card">
+  <div class="card-body">
+    <form (ngSubmit)="updateStudent()" class="container-fluid">
+      <div
+        class="card-header border-0 cursor-pointer"
+        role="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#kt_account_profile_details"
+        aria-expanded="true"
+        aria-controls="kt_account_profile_details"
+      >
+        <div class="card-title m-0">
+          <h3 class="fw-bolder m-0">Profile Details</h3>
+        </div>
+      </div>
+      <div id="kt_account_profile_details" class="collapse show">
+        <div class="card-body border-top p-9">
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >First Name</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                [(ngModel)]="students.firstname"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="firstname"
+              />
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >Middle Name</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                [(ngModel)]="students.middlename"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="middlename"
+              />
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >Last Name</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                [(ngModel)]="students.lastname"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="lastname"
+              />
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >Level</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                [(ngModel)]="students.level"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="level"
+              />
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >age</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input
+                [(ngModel)]="students.age"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="age"
+              />
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-6">
+            <label class="col-lg-4 col-form-label required fw-bold fs-6"
+              >Course</label
+            >
+            <div class="col-lg-8 fv-row">
+              <input [(ngModel)]="students.course"
+                type="text"
+                class="form-control form-control-lg form-control-solid"
+                name="course"
+              />
+            </div>
+          <div>
+          </div>
+        </div>
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label required fw-bold fs-6"
+            >Branch</label
+          >
+          <div class="col-lg-8 fv-row">
+            <input [(ngModel)]="students.branch"
+              type="text"
+              class="form-control form-control-lg form-control-solid"
+              name="branch"
+            />
+          </div>
+        <div>
+        </div>
+        
+      </div>
+      <div class="row mb-6">
+        <label class="col-lg-4 col-form-label required fw-bold fs-6"
+          >Phone</label
+        >
+        <div class="col-lg-8 fv-row">
+          <input [(ngModel)]="students.phone"
+            type="text"
+            class="form-control form-control-lg form-control-solid"
+            name="phone"
+          />
+        </div>
+      <div>
+      </div>
+    </div>
+    <div class="row mb-6">
+      <label class="col-lg-4 col-form-label required fw-bold fs-6"
+        >Status</label
+      >
+      <div class="col-lg-8 fv-row">
+        <input [(ngModel)]="students.status"
+          type="text"
+          class="form-control form-control-lg form-control-solid"
+          name="status"
+        />
+      </div>
+    <div>
+    </div>
+  </div>
+  <div class="row mb-6">
+    <label class="col-lg-4 col-form-label required fw-bold fs-6"
+      >Date Enrolled</label
+    >
+    <div class="col-lg-8 fv-row">
+      <input [(ngModel)]="students.created_at"
+        type="text"
+        class="form-control form-control-lg form-control-solid"
+        name="created_at"
+      />
+    </div>
+  <div>
+  </div>
+</div>
+          <div class="card-footer d-flex justify-content-end py-6 px-9">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="isLoading"
+            >
+              <ng-container *ngIf="!isLoading">Save Changes</ng-container>
+              <ng-container *ngIf="isLoading">
+                <span clas="indicator-progress" [style.display]="'block'">
+                  Please wait...{{ " " }}
+                  <span
+                    class="spinner-border spinner-border-sm align-middle ms-2"
+                  ></span>
+                </span>
+              </ng-container>
+            </button>
+            <button class="btn btn-danger" (click)="close()" type="button">
+              Exit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

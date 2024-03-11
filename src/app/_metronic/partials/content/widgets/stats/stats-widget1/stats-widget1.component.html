@@ -1,0 +1,7 @@
+<div class="card-body" *ngIf="user$ | async as _user">
+  <a href="#" class="card-title fw-bolder text-muted text-hover-primary fs-4">
+    {{ _user.course }}
+  </a>
+
+  <div class="fw-bolder text-primary my-6">Course</div>
+</div>

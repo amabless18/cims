@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-body">
+        <form #myForm="ngForm" (ngSubmit)="InsertData()" class="container-fluid">
+            <div
+                class="card-header border-0 cursor-pointer"
+                role="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#kt_account_profile_details"
+                aria-expanded="true"
+                aria-controls="kt_account_profile_details"
+              >
+                <div class="card-title m-0">
+                  <h3 class="fw-bolder m-0">Create Post</h3>
+                </div>
+              </div>
+              <div id="kt_account_profile_details" class="collapse show">
+                <div class="card-body border-top p-9">
+                  <div class="row mb-6">
+                    <textarea class="form-control" [(ngModel)]="socials.description" name="description" id="exampleFormControlTextarea1" rows="4" placeholder="What's on your mind?"></textarea>
+                    <div class="mb-3">
+                      <label for="formFileMultiple" class="form-label">Add to your post</label><br>
+                      <input type="file" name="media" (change)="onFileChange($event)" multiple accept="image/*, video/*" />
+                      <div class="image-input-wrapper w-125px h-125px" *ngIf="socials.media">
+                        <img [src]="socials.media" alt="Avatar" class="w-100 h-100" />
+                        <i class="bi bi-x-circle" (click)="removeImage()"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-end py-6 px-9">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    <ng-container >Save Changes</ng-container>
+                    <ng-container >
+                    </ng-container>
+                  </button>
+                  <button class="btn btn-danger" (click)="close()" type="button">Exit</button>
+                </div>
+              </div>
+          </form>
+    </div>
+</div>
+  

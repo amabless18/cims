@@ -1,0 +1,67 @@
+<div class="card mb-5 mb-xl-10" id="kt_profile_details_view" *ngIf="user$ | async as _user">
+  <div class="card-header cursor-pointer">
+    <div class="card-title m-0">
+      <h3 class="fw-bolder m-0">Profile Details</h3>
+    </div>
+  </div>
+  
+  <div class="card-body p-9">
+
+    <div class="col-xl-4">
+      <app-stats-widget1
+        class="card bgi-no-repeat card-xl-stretch mb-xl-8"
+        title="Your Availability Schedule"
+        time="3:30PM - 4:20PM"
+        [ngStyle]="{
+          'background-position': 'right top',
+          'background-size': '30% auto',
+          'background-image': 'url(./assets/media/svg/shapes/abstract-4.svg)'
+        }"
+      ></app-stats-widget1>
+    </div>
+
+    <div class="row mb-7">
+      <label class="col-lg-4 fw-bold text-muted">Age</label>
+
+      <div class="col-lg-8 fv-row">
+        <span class="fw-bold fs-6">{{ _user.age }}</span>
+      </div>
+    </div>
+
+    <div class="row mb-7">
+      <label class="col-lg-4 fw-bold text-muted">Branch</label>
+
+      <div class="col-lg-8 fv-row">
+        <span class="fw-bold fs-6">{{ _user.branch }}</span>
+      </div>
+    </div>
+
+    <div class="row mb-7">
+      <label class="col-lg-4 fw-bold text-muted">Email</label>
+
+      <div class="col-lg-8">
+        <a class="fw-bold fs-6 text-dark text-hover-primary">
+          {{ _user.email }}
+        </a>
+      </div>
+    </div>
+
+    <div class="row mb-7">
+      <label class="col-lg-4 fw-bold text-muted">
+        Status
+        <i
+          class="fas fa-exclamation-circle ms-1 fs-7"
+          data-bs-toggle="tooltip"
+          title="Phone number must be active"
+        ></i>
+      </label>
+
+      <div class="col-lg-8 d-flex align-items-center">
+        <span class="badge badge-success">{{ _user.status }}</span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+

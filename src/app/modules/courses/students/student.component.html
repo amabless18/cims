@@ -1,0 +1,86 @@
+<div class="card">
+  <!-- begin::Header -->
+<div class="card-header border-0 pt-5">
+  <h3 class="card-title align-items-start flex-column">
+    <span class="card-label fw-bolder fs-3 mb-1">Students</span>
+  </h3>
+  
+</div>
+<!-- end::Header -->
+<!-- begin::Body -->
+<div class="card-body py-3">
+  <!-- begin::Table container -->
+  <div class="table-responsive">
+    <!-- begin::Table -->
+    <table
+      class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3"
+    >
+      <!-- begin::Table head -->
+      <thead>
+        <tr class="fw-bolder text-muted">
+          <th class="min-w-150px">User Id</th>
+          <th class="min-w-150px">First Name</th>
+          <th class="min-w-150px">Middle Name</th>
+          <th class="min-w-150px">Last Name</th>
+          <th class="min-w-150px">Status</th>
+          <th class="min-w-150px">Date Enrolled</th>
+          <th class="min-w-100px text-end">Actions</th>
+        </tr>
+      </thead>
+      <!-- end::Table head -->
+      <!-- begin::Table body -->
+      <tbody>
+        <tr *ngFor="let item of students">         
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.user_id}}
+          </td>
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.firstname}}
+          </td>
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.middlename}}
+          </td>
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.lastname}}
+          </td>
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.status}}
+          </td>
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+            {{item.created_at | date:'longDate' }}
+          </td>
+          <td class="text-end">
+            <button (click)="openEditView(item.id)"
+              type="button"
+              class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-1
+              "
+            >
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
+                class="svg-icon svg-icon-3"
+              ></span>
+          </button>
+            <div class="text-end">
+              <button
+              type="button" (click)="deleteData(item.id)"
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
+            >
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
+                class="svg-icon svg-icon-3"
+              ></span>
+          </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <!-- end::Table body -->
+    </table>
+    <!-- end::Table -->
+  </div>
+  <!-- end::Table container -->
+</div>
+<!-- begin::Body -->  
+</div>
