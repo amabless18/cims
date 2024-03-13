@@ -1,1 +1,132 @@
-<p>enrollment works!</p>
+<div class="card">
+  <!-- begin::Header -->
+  <div class="card-header border-0 pt-5" >
+      <div class="row mb-6">
+          <div class="col-lg-10">
+              <input type="text" name="search" id="" [(ngModel)]="appointmentNumber" placeholder="Enter Appointment Number" class="form-control form-control-xl form-control-solid">
+          </div>
+          <div class="col-lg-2">
+              <a type="button" (click)="search()" class="btn btn-primary p-4">Search</a>
+          </div>
+      </div>
+      <div class="row">
+          <!-- Any additional content can be added here -->
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+      <form #myForm="ngForm" (ngSubmit)="updateData()" class="container-fluid">
+          <div
+              class="card-header border-0 cursor-pointer"
+              role="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#kt_account_profile_details"
+              aria-expanded="true"
+              aria-controls="kt_account_profile_details"
+            >
+              <div class="card-title m-0">
+                <h3 class="fw-bolder m-0">User Details</h3>
+              </div>
+            </div>
+            <div id="kt_account_profile_details" class="collapse show">
+              <div class="card-body border-top p-9">
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6">User Type</label>
+                  <div class="col-lg-8 fv-row">
+                    <select [(ngModel)]="users.userType" class="form-control form-control-lg form-control-solid" name="userType">
+                      <option value="student">student</option>
+                    </select>
+                  </div>
+                </div>
+                       
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                    >First Name</label
+                  >
+                  <div class="col-lg-8 fv-row">
+                    <input [(ngModel)]="users.firstname"
+                      type="text"
+                      class="form-control form-control-lg form-control-solid"
+                      placeholder="First Name"
+                      name="firstname"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                    >Middle Name</label
+                  >
+                  <div class="col-lg-8 fv-row">
+                    <input [(ngModel)]="users.middlename"
+                      type="text"
+                      class="form-control form-control-lg form-control-solid"
+                      placeholder="Middle Name"
+                      name="middlename"
+                    />
+                  </div>
+                </div> 
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                    >Last Name</label
+                  >
+                  <div class="col-lg-8 fv-row">
+                    <input [(ngModel)]="users.lastname"
+                      type="text"
+                      class="form-control form-control-lg form-control-solid"
+                      placeholder="Last Name"
+                      name="lastname"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                    >Course</label
+                  >
+                  <div class="col-lg-8 fv-row">
+                    <input [(ngModel)]="users.course"
+                      type="text"
+                      class="form-control form-control-lg form-control-solid"
+                      placeholder="Course"
+                      name="course"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-6">
+                  <label class="col-lg-4 col-form-label required fw-bold fs-6"
+                    >Branch</label
+                  >
+                  <div class="col-lg-8 fv-row">
+                    <input [(ngModel)]="users.branch"
+                      type="text"
+                      class="form-control form-control-lg form-control-solid"
+                      placeholder="Branch"
+                      name="branch"
+                    />
+                  </div>
+                </div>    
+              </div>
+              <div class="card-footer d-flex justify-content-end py-6 px-9">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  [disabled]="isLoading"
+                  
+                >
+                  <ng-container *ngIf="!isLoading">Save Changes</ng-container>
+                  <ng-container *ngIf="isLoading">
+                    <span clas="indicator-progress" [style.display]="'block'">
+                      Please wait...{{ " " }}
+                      <span
+                        class="spinner-border spinner-border-sm align-middle ms-2"
+                      ></span>
+                    </span>
+                  </ng-container>
+                </button>
+              </div>
+            </div>
+        </form>
+  </div>
+</div>
+
+

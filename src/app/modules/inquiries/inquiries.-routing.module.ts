@@ -31,6 +31,10 @@ const routes: Routes = [
         path: 'enrollment',
         component:EnrollmentComponent,
       },
+      {
+        path: 'enrollment/:id',
+        component:EnrollmentComponent,
+      },
     ],
   },
 ];

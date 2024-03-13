@@ -135,6 +135,23 @@ export class DataService {
     return this.httpClient.delete(url);
   }
 
+  //Appointment Enrollment and Employment
+  getUsers(): Observable<any> {
+    const url = `${this.baseUrl}/user`;
+    return this.httpClient.get(url);
+  }
+
+  getUserAppointment(userId: any): Observable<any> {
+    const url = `${this.baseUrl}/user/${userId}`;
+    return this.httpClient.get(url);
+  }
+
+  updateUserAppointment(userId: any, userData: any): Observable<any> {
+    const url = `${this.baseUrl}/updateUser/${userId}`;
+    return this.httpClient.put(url, userData);
+  }
+
+
 
   //Branch
   getBranches(): Observable<any> {

@@ -61,7 +61,7 @@ export class EditCoachComponent {
 
   getAll(){
     this.dataService.getCoach(this.id).subscribe((res) => {
-      console.log(res)
+      //console.log(res)
       this.coaches = res;
       this.cdr.detectChanges();
     });
