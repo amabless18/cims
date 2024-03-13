@@ -1,5 +1,69 @@
 <!-- begin::Row -->
 <div class="row gy-5 g-xl-8" *ngIf="user$ | async as _user">
+  <div *ngIf="_user.status === 'pending'">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="success">You are succesfully registered!</h1>
+        <style>
+          /* Additional CSS styling */
+          .success {
+              font-family: Arial, sans-serif;
+              font-size: 24px;
+              text-align: center;
+              padding: 20px;
+              border: 2px solid #333;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+              background-color: #f0f0f0;
+              margin: 50px auto;
+              width: 80%;
+          
+              /* Animation */
+              animation: flicker 3s infinite alternate;
+          }
+          
+          /* Keyframes for flickering effect */
+          @keyframes flicker {
+              0% { color: #ff0000; } /* Red */
+              20% { color: #00ff00; } /* Green */
+              40% { color: #0000ff; } /* Blue */
+              60% { color: #ffff00; } /* Yellow */
+              80% { color: #ff00ff; } /* Magenta */
+              100% { color: #00ffff; } /* Cyan */
+          }
+          </style>
+      </div>
+      
+      
+
+      <h1>Your appoinment number: {{_user.id}}</h1>
+
+        <p class="card-text" style="font-size: 1.3em">Please visit our nearest branch for finalization of your enrollment and evaluation process. 
+          We look forward to welcoming you to our training center and assisting you on your learning journey.</p>
+          <h1>General Santos City</h1><br>
+          <div class="map-content-9">
+              <div class="map-iframe">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.092054688669!2d125.19034427505156!3d6.118309927739195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79fc9cd6fa1ed%3A0x9d7287ef9095e689!2sOYO%20418%20Pensionne%20Alonso!5e0!3m2!1sen!2sph!4v1704648746501!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+          <br><br>
+          <h1>Isulan</h1>
+          <div class="map-content-9">
+              <div class="map-iframe">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.371405074065!2d124.57982595541993!3d6.635390100000021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f80fbf7f632869%3A0x22bd130fc33bc36!2sAMABLESS%20MUSIC%20AND%20ARTS%20STUDIO!5e0!3m2!1sen!2sph!4v1704934675168!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+          <br><br>
+          <h1>Norala</h1>
+          <div class="map-content-9">
+              <div class="map-iframe">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.0062278476341!2d124.66260404852778!3d6.5201057244066805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f805094abf79ef%3A0x9a4cb632f9fcbece!2sCentro%20de%20Musica%20Amabless!5e0!3m2!1sen!2sph!4v1704935408949!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>       
+    </div>
+  </div>
+
+
   <div class="col-xxl-4" *ngIf="_user.userType === 'Admin'">
     <app-mixed-widget2
       class="card card-xl-stretch mb-xl-8"
@@ -9,29 +73,31 @@
     ></app-mixed-widget2>
   </div>
   <div class="col-xxl-4">
-    <app-tables-widget8 class="card card-xxl-stretch" *ngIf="_user.userType === 'Admin'">
-
+    <app-tables-widget8
+      class="card card-xxl-stretch"
+      *ngIf="_user.userType === 'Admin'"
+    >
     </app-tables-widget8>
   </div>
-  <div class="col-xxl-4" *ngIf="_user.userType === 'Coach'">
+  <div class="col-xxl-4" *ngIf="_user.userType === 'coach'">
     <div class="row g-5 g-xl-8">
       <div class="col-xl-6">
-        <app-stats-widget5 
-      svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
-      class="card bg-primary hoverable card mb-5 mb-xl-8"
-      color="danger"
-      iconColor="white"
-      [title]="_user.course"
-      description="Course"
-    ></app-stats-widget5>
+        <app-stats-widget5
+          svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
+          class="card bg-primary hoverable card mb-5 mb-xl-8"
+          color="danger"
+          iconColor="white"
+          [title]="_user.course"
+          description="Course"
+        ></app-stats-widget5>
       </div>
       <div class="col-xl-6">
         <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
       </div>
       <app-tables-widget6 class="card mb-5 mb-xl-8"></app-tables-widget6>
-    </div>   
+    </div>
   </div>
-  <div *ngIf="_user.userType === 'Student'">
+  <div *ngIf="_user.userType === 'student'">
     <div class="row g-5 g-xl-8">
       <div class="col-xl-6">
         <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
@@ -47,16 +113,16 @@
         ></app-stats-widget5>
       </div>
       <div class="col-xl-6">
-        <app-stats-widget5 
-      svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
-      class="card bg-primary hoverable card mb-5 mb-xl-8"
-      color="danger"
-      iconColor="white"
-      [title]="_user.course"
-      description="Course"
-    ></app-stats-widget5>
+        <app-stats-widget5
+          svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
+          class="card bg-primary hoverable card mb-5 mb-xl-8"
+          color="danger"
+          iconColor="white"
+          [title]="_user.course"
+          description="Course"
+        ></app-stats-widget5>
       </div>
-    </div>    
+    </div>
   </div>
 </div>
-  
+
