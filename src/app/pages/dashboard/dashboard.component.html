@@ -7,62 +7,102 @@
         <style>
           /* Additional CSS styling */
           .success {
-              font-family: Arial, sans-serif;
-              font-size: 24px;
-              text-align: center;
-              padding: 20px;
-              border: 2px solid #333;
-              border-radius: 10px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-              background-color: #f0f0f0;
-              margin: 50px auto;
-              width: 80%;
-          
-              /* Animation */
-              animation: flicker 3s infinite alternate;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #f0f0f0;
+            margin: 50px auto;
+            width: 80%;
+
+            /* Animation */
+            animation: flicker 3s infinite alternate;
           }
-          
+
           /* Keyframes for flickering effect */
           @keyframes flicker {
-              0% { color: #ff0000; } /* Red */
-              20% { color: #00ff00; } /* Green */
-              40% { color: #0000ff; } /* Blue */
-              60% { color: #ffff00; } /* Yellow */
-              80% { color: #ff00ff; } /* Magenta */
-              100% { color: #00ffff; } /* Cyan */
+            0% {
+              color: #ff0000;
+            } /* Red */
+            20% {
+              color: #00ff00;
+            } /* Green */
+            40% {
+              color: #0000ff;
+            } /* Blue */
+            60% {
+              color: #ffff00;
+            } /* Yellow */
+            80% {
+              color: #ff00ff;
+            } /* Magenta */
+            100% {
+              color: #00ffff;
+            } /* Cyan */
           }
-          </style>
+        </style>
       </div>
-      
-      
 
-      <h1>Your appoinment number: {{_user.id}}</h1>
+      <h1>Your appoinment number: {{ _user.id }}</h1>
 
-        <p class="card-text" style="font-size: 1.3em">Please visit our nearest branch for finalization of your enrollment and evaluation process. 
-          We look forward to welcoming you to our training center and assisting you on your learning journey.</p>
-          <h1>General Santos City</h1><br>
-          <div class="map-content-9">
-              <div class="map-iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.092054688669!2d125.19034427505156!3d6.118309927739195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79fc9cd6fa1ed%3A0x9d7287ef9095e689!2sOYO%20418%20Pensionne%20Alonso!5e0!3m2!1sen!2sph!4v1704648746501!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-          </div>
-          <br><br>
-          <h1>Isulan</h1>
-          <div class="map-content-9">
-              <div class="map-iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.371405074065!2d124.57982595541993!3d6.635390100000021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f80fbf7f632869%3A0x22bd130fc33bc36!2sAMABLESS%20MUSIC%20AND%20ARTS%20STUDIO!5e0!3m2!1sen!2sph!4v1704934675168!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-          </div>
-          <br><br>
-          <h1>Norala</h1>
-          <div class="map-content-9">
-              <div class="map-iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.0062278476341!2d124.66260404852778!3d6.5201057244066805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f805094abf79ef%3A0x9a4cb632f9fcbece!2sCentro%20de%20Musica%20Amabless!5e0!3m2!1sen!2sph!4v1704935408949!5m2!1sen!2sph" width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-          </div>       
+      <p class="card-text" style="font-size: 1.3em">
+        Please visit our nearest branch for finalization of your enrollment and
+        evaluation process. We look forward to welcoming you to our training
+        center and assisting you on your learning journey.
+      </p>
+      <h1>General Santos City</h1>
+      <br />
+      <div class="map-content-9">
+        <div class="map-iframe">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.092054688669!2d125.19034427505156!3d6.118309927739195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f79fc9cd6fa1ed%3A0x9d7287ef9095e689!2sOYO%20418%20Pensionne%20Alonso!5e0!3m2!1sen!2sph!4v1704648746501!5m2!1sen!2sph"
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border: 0px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <br /><br />
+      <h1>Isulan</h1>
+      <div class="map-content-9">
+        <div class="map-iframe">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15852.371405074065!2d124.57982595541993!3d6.635390100000021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f80fbf7f632869%3A0x22bd130fc33bc36!2sAMABLESS%20MUSIC%20AND%20ARTS%20STUDIO!5e0!3m2!1sen!2sph!4v1704934675168!5m2!1sen!2sph"
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border: 0px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <br /><br />
+      <h1>Norala</h1>
+      <div class="map-content-9">
+        <div class="map-iframe">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.0062278476341!2d124.66260404852778!3d6.5201057244066805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f805094abf79ef%3A0x9a4cb632f9fcbece!2sCentro%20de%20Musica%20Amabless!5e0!3m2!1sen!2sph!4v1704935408949!5m2!1sen!2sph"
+            width="100%"
+            height="400"
+            frameborder="0"
+            style="border: 0px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </div>
   </div>
-
 
   <div class="col-xxl-4" *ngIf="_user.userType === 'Admin'">
     <app-mixed-widget2
@@ -78,51 +118,141 @@
       *ngIf="_user.userType === 'Admin'"
     >
     </app-tables-widget8>
-  </div>
-  <div class="col-xxl-4" *ngIf="_user.userType === 'coach'">
-    <div class="row g-5 g-xl-8">
-      <div class="col-xl-6">
-        <app-stats-widget5
-          svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
-          class="card bg-primary hoverable card mb-5 mb-xl-8"
-          color="danger"
-          iconColor="white"
-          [title]="_user.course"
-          description="Course"
-        ></app-stats-widget5>
-      </div>
-      <div class="col-xl-6">
-        <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
-      </div>
-      <app-tables-widget6 class="card mb-5 mb-xl-8"></app-tables-widget6>
-    </div>
-  </div>
-  <div *ngIf="_user.userType === 'student'">
-    <div class="row g-5 g-xl-8">
-      <div class="col-xl-6">
-        <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
-      </div>
-      <div class="col-xl-6">
-        <app-stats-widget5
-          svgIcon="./assets/media/icons/duotune/graphs/gra007.svg"
-          class="card bg-info hoverable card-xl-stretch mb-5 mb-xl-8"
-          color="info"
-          iconColor="white"
-          [title]="_user.coach_name"
-          description="Coach"
-        ></app-stats-widget5>
-      </div>
-      <div class="col-xl-6">
-        <app-stats-widget5
-          svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
-          class="card bg-primary hoverable card mb-5 mb-xl-8"
-          color="danger"
-          iconColor="white"
-          [title]="_user.course"
-          description="Course"
-        ></app-stats-widget5>
-      </div>
-    </div>
-  </div>
-</div>
 
+    <div class="card mt-3" *ngIf="user$ | async as _user">
+      <div
+        class="card-body d-flex align-items-center"
+        *ngIf="_user.userType === 'Admin'"
+      >
+        <div class="symbol symbol-50px me-5">
+          <img alt="Logo" [src]="_user.pic" />
+        </div>
+        <button
+          class="btn btn-secondary rounded-pill pl-4"
+          (click)="createPost()"
+        >
+          What's on your mind, Head Coach?
+        </button>
+      </div>
+    </div>
+    
+    <div class="col-xxl-4" *ngIf="_user.userType === 'coach'">
+      <div class="row g-5 g-xl-8">
+        <div class="col-xl-6">
+          <app-stats-widget5
+            svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
+            class="card bg-primary hoverable card mb-5 mb-xl-8"
+            color="danger"
+            iconColor="white"
+            [title]="_user.course"
+            description="Course"
+          ></app-stats-widget5>
+        </div>
+        <div class="col-xl-6">
+          <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
+        </div>
+        <app-tables-widget6 class="card mb-5 mb-xl-8"></app-tables-widget6>
+      </div>
+    </div>
+    <div *ngIf="_user.userType === 'student'">
+      <div class="row g-5 g-xl-8">
+        <div class="col-xl-6">
+          <app-tables-widget8 class="card mb-5 mb-xl-8"></app-tables-widget8>
+        </div>
+        <div class="col-xl-6">
+          <app-stats-widget5
+            svgIcon="./assets/media/icons/duotune/graphs/gra007.svg"
+            class="card bg-info hoverable card-xl-stretch mb-5 mb-xl-8"
+            color="info"
+            iconColor="white"
+            [title]="_user.coach_name"
+            description="Coach"
+          ></app-stats-widget5>
+        </div>
+        <div class="col-xl-6">
+          <app-stats-widget5
+            svgIcon="./assets/media/icons/duotune/ecommerce/ecm008.svg"
+            class="card bg-primary hoverable card mb-5 mb-xl-8"
+            color="danger"
+            iconColor="white"
+            [title]="_user.course"
+            description="Course"
+          ></app-stats-widget5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="_user.status === 'enrolled'">
+    <div class="card-body pb-0" *ngFor="let item of social">
+      <!--begin::Header -->
+      <div class="d-flex align-items-center mb-5">
+        <!--begin::User -->
+        <div class="d-flex align-items-center flex-grow-1">
+          <!--begin::Avatar -->
+          <div class="symbol symbol-45px me-5">
+            <img href="./assets/media/logos/main_logo.jpg" alt="" />
+          </div>
+          <!--end::Avatar -->
+
+          <!--begin::Info -->
+          <div class="d-flex flex-column">
+            <a
+              href="#"
+              class="text-gray-800 text-hover-primary fs-6 fw-bolder"
+            >
+              Amabless Training Center
+            </a>
+
+            <span class="text-gray-400 fw-bold">Admin</span>
+          </div>
+          <!--end::Info -->
+        </div>
+        <!--end::User -->
+
+        <!--begin::Menu -->
+        <div class="my-0">
+          <button
+            type="button"
+            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+            data-kt-menu-trigger="click"
+            data-kt-menu-placement="bottom-end"
+            data-kt-menu-flip="top-end"
+          >
+            <span class="svg-icon svg-icon-2"></span>
+          </button>
+        </div>
+        <!--end::Menu -->
+      </div>
+      <!--end::Header -->
+
+      <!--begin::Post -->
+      <div class="mb-5">
+        <!--begin::Image -->
+        <div class="bgi-no-repeat bgi-size-cover rounded min-h-250px mb-5">
+          <img [src]="item.media" class="img-fluid" />
+        </div>
+        <!--end::Image -->
+
+        <!--begin::Text -->
+        <div class="text-gray-800 mb-5">
+          {{ item.description }}
+        </div>
+        <!--end::Text -->
+
+        <!--begin::Toolbar -->
+        <div class="d-flex align-items-center mb-5"></div>
+        <!--end::Toolbar -->
+      </div>
+      <!--end::Post -->
+
+      <!--begin::Separator -->
+      <div class="separator mb-4"></div>
+      <!--end::Separator -->
+
+      <!--begin::Reply input -->
+
+      <!--edit::Reply input -->
+    </div>
+  </div>
+
+</div>
