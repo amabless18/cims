@@ -51,6 +51,10 @@ const routes: Routes = [
         path: 'students',
         component: StudentComponent,
       },
+      {
+        path: 'evaluation/:id/students/:id',
+        component:EvaluationComponent,
+      },
     ],
   },
 ];

@@ -5,21 +5,21 @@ import { InlineSVGModule } from 'ng-inline-svg';
 import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoursesRoutingModule } from './courses-routing.module';
 import { CoursesComponent } from './courses.component';
-import { EvaluationModule } from 'src/app/evaluation/evaluation.module';
+import { EvaluationModule } from 'src/app/modules/courses/evaluation/evaluation.module';
 import { CourseModule } from '../credential/courses/course.module';
 import { StudentModule } from './students/student.module';
 import { CoachModule } from './coaches/coach.module';
 
 @NgModule({
-  declarations: [CoursesComponent,],
+  declarations: [CoursesComponent],
   imports: [
     CommonModule,
     CoursesRoutingModule,
     FormsModule,
+    EvaluationModule,
     ReactiveFormsModule,
     InlineSVGModule,
     NgbTooltipModule,
-    EvaluationModule,
     CourseModule,
     CoachModule,
     StudentModule,
