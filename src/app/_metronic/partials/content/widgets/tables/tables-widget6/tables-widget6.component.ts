@@ -15,7 +15,11 @@ type Tabs =
 export class TablesWidget6Component implements OnInit {
   students: any;
   user$: Observable<UserType>;
-  constructor(private auth: AuthService, private dataService: DataService, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private auth: AuthService,
+    private dataService: DataService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   activeTab: Tabs = 'kt_table_widget_6_tab_1';
 
@@ -29,19 +33,28 @@ export class TablesWidget6Component implements OnInit {
 
   ngOnInit(): void {
     this.user$ = this.auth.currentUserSubject.asObservable();
-    this.user$.subscribe(user => {
+    this.user$.subscribe((user) => {
       if (user && user.id) {
-        this.dataService.getStudentsbyEnrollment(user.id).subscribe(
-          userData => {
-            console.log('User with students:', userData);
-            this.students = userData;
-            this.students = Object.values(userData.students);
-            this.cdr.detectChanges();
-          },
-          error => {
-            console.error('Error fetching user data:', error);
-          }
-        );
+        // Assuming user.id corresponds to coachId or userId
+        const coachId = user.id; // Change this according to your data structure
+        const userId = user.id; // Change this according to your data structure
+
+        // Ensure coachId and userId match
+        if (coachId === userId) {
+          this.dataService.getStudents().subscribe(
+            (studentsData) => {
+              console.log('Students associated with the coach:', studentsData);
+              // Assuming studentsData is an array of students
+              this.students = studentsData;
+              this.cdr.detectChanges();
+            },
+            (error) => {
+              console.error('Error fetching students data:', error);
+            }
+          );
+        } else {
+          console.error('Coach ID and User ID do not match.');
+        }
       }
     });
   }

@@ -35,6 +35,14 @@ const routes: Routes = [
         path: 'enrollment/:id',
         component:EnrollmentComponent,
       },
+      {
+        path: 'employment',
+        component:EmploymentComponent,
+      },
+      {
+        path: 'employment/:id',
+        component:EmploymentComponent,
+      },
     ],
   },
 ];

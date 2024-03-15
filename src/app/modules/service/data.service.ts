@@ -17,6 +17,12 @@ export class DataService {
   private apiFilter = 'http://localhost:44301/api/users/filter';
 
   constructor(private httpClient: HttpClient) {}
+
+  getStudentsForLoggedInCoach(): Observable<any> {
+    const url = `${this.baseUrl}/coach/students`;
+    return this.httpClient.get(url);
+  }
+
   //ALL USERS
   getData(roles: string, course: string): Observable<any> {
     const url = `${this.apiUrlStudents}?roles=${roles}&course=${course}`;
@@ -260,7 +266,7 @@ export class DataService {
 
   //Students to User Coach (Enrollment)
   getStudentsbyEnrollment(userId: any): Observable<any> {
-    const url = `${this.apiUrlStudents}/${userId}/students`;
+    const url = `${this.baseUrl}/user/${userId}/students`;
     return this.httpClient.get(url);
   }
 
