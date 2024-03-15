@@ -30,27 +30,27 @@ export class DataService {
   }
 
   getUserData(): Observable<any> {
-    return this.httpClient.get('http://localhost:44301/api/user');
+    return this.httpClient.get('http://152.42.166.207/api/user');
   }
 
   getUserDatabyId(id: number): Observable<any> {
-    return this.httpClient.get('http://localhost:44301/api/user/' + id);
+    return this.httpClient.get('http://152.42.166.207/api/user/' + id);
   }
 
   insertUserData(data: any): Observable<any> {
-    return this.httpClient.post('http://localhost:44301/api/addUser', data);
+    return this.httpClient.post('http://152.42.166.207/api/addUser', data);
   }
 
   updateUserData(id: any, data: any): Observable<any> {
     return this.httpClient.put(
-      'http://localhost:44301/api/updateUser/' + id,
+      'http://152.42.166.207/api/updateUser/' + id,
       data
     );
   }
 
   deleteUserData(id: any): Observable<any> {
     return this.httpClient.delete(
-      'http://localhost:44301/api/deleteUser/' + id
+      'http://152.42.166.207/api/deleteUser/' + id
     );
   }
 
