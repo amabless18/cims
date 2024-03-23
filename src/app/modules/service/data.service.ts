@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Branch } from 'src/app/branch';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  
-  private baseUrl = 'http://152.42.166.207/api';
+  private baseUrl = 'http://localhost:44301/api';
 
   private apiUrlCoaches = 'http://152.42.166.207/api/courses';
 
@@ -23,38 +21,73 @@ export class DataService {
     return this.httpClient.get(url);
   }
 
+  //users
+  // getData(courseId: any): Observable<any> {
+  //   const url = `${this.apiUrlCoaches}/${courseId}/coaches`;
+  //   return this.httpClient.get(url);
+  // }
+
+  getStudentRelationship(userId: number): Observable<any> {
+    const url = `${this.baseUrl}/getall/${userId}`;
+    return this.httpClient.get(url);
+    //return this.httpClient.get<any>(`/getall/${userId}`);
+  }
+
+  getUserData(): Observable<any> {
+    const url = `${this.baseUrl}/user`;
+    return this.httpClient.get(url);
+  }
+
+  getUserDatabyId(id: any): Observable<any> {
+    const url = `${this.baseUrl}/user/${id}`;
+    return this.httpClient.get(url);
+  }
+
+  insertUserData(data: any): Observable<any> {
+    const url = `${this.baseUrl}/addUser`;
+    return this.httpClient.post(url, data);
+  }
+
+  updateUserData(id: any, data: any): Observable<any> {
+    const url = `${this.baseUrl}/updateUser/${id}`;
+    return this.httpClient.put(url, data);
+  }
+
+  deleteUserData(id: any): Observable<any> {
+    const url = `${this.baseUrl}/deleteUser/${id}`;
+    return this.httpClient.delete(url);
+  }
+
   //ALL USERS
   getData(roles: string, course: string): Observable<any> {
     const url = `${this.apiUrlStudents}?roles=${roles}&course=${course}`;
     return this.httpClient.get(url);
   }
 
-  getUserData(): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/user');
-  }
+  // getUserData(): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/user');
+  // }
 
-  getUserDatabyId(id: number): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/user/' + id);
-  }
+  // getUserDatabyId(id: number): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/user/' + id);
+  // }
 
-  insertUserData(data: any): Observable<any> {
-    return this.httpClient.post('http://152.42.166.207/api/addUser', data);
-  }
+  // insertUserData(data: any): Observable<any> {
+  //   return this.httpClient.post('http://152.42.166.207/api/addUser', data);
+  // }
 
-  updateUserData(id: any, data: any): Observable<any> {
-    return this.httpClient.put(
-      'http://152.42.166.207/api/updateUser/' + id,
-      data
-    );
-  }
+  // updateUserData(id: any, data: any): Observable<any> {
+  //   return this.httpClient.put(
+  //     'http://152.42.166.207/api/updateUser/' + id,
+  //     data
+  //   );
+  // }
 
-  deleteUserData(id: any): Observable<any> {
-    return this.httpClient.delete(
-      'http://152.42.166.207/api/deleteUser/' + id
-    );
-  }
-
-  
+  // deleteUserData(id: any): Observable<any> {
+  //   return this.httpClient.delete(
+  //     'http://152.42.166.207/api/deleteUser/' + id
+  //   );
+  // }
 
   //ALL SOCIALS
   getSocialData(): Observable<any> {
@@ -112,9 +145,6 @@ export class DataService {
     return this.httpClient.get('http://152.42.166.207/api/user/' + id);
   }
 
-  
-
-
   //Coaches
   getCoachesbyEmployment(courseId: any): Observable<any> {
     const url = `${this.apiUrlCoaches}/${courseId}/coaches`;
@@ -131,7 +161,11 @@ export class DataService {
     return this.httpClient.post(url, coachData);
   }
 
-  updateCoachbyEmployment(courseId: any, coachId: any, coachData: any): Observable<any> {
+  updateCoachbyEmployment(
+    courseId: any,
+    coachId: any,
+    coachData: any
+  ): Observable<any> {
     const url = `${this.apiUrlCoaches}/${courseId}/coaches/${coachId}`;
     return this.httpClient.put(url, coachData);
   }
@@ -156,8 +190,6 @@ export class DataService {
     const url = `${this.baseUrl}/updateUser/${userId}`;
     return this.httpClient.put(url, userData);
   }
-
-
 
   //Branch
   getBranches(): Observable<any> {
@@ -262,7 +294,6 @@ export class DataService {
     const url = `${this.baseUrl}/coaches/${coachId}`;
     return this.httpClient.delete(url);
   }
-
 
   //Students to User Coach (Enrollment)
   getStudentsbyEnrollment(userId: any): Observable<any> {

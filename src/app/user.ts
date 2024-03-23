@@ -11,7 +11,7 @@ export class User {
     branch:any;
     session:any;
     session_time: any;
-    coach_name: any;
+    coach_id: any;
     created_at: any;
     course:any;
     age:any;

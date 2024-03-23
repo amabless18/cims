@@ -20,6 +20,7 @@ export class UserModel extends AuthModel {
   status: any;
   course: any;
   age: any;
+  student: any;
   students: StudentModel[];
   occupation: string;
   companyName: string;
