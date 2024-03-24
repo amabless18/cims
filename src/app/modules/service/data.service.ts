@@ -12,7 +12,7 @@ export class DataService {
 
   private apiUrlStudents = 'http://152.42.166.207/api/user';
 
-  private apiFilter = 'http://152.42.166.207/api/users/filter';
+  //private apiFilter = 'http://152.42.166.207/api/users/filter';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -89,57 +89,84 @@ export class DataService {
   //   );
   // }
 
-  //ALL SOCIALS
   getSocialData(): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/social');
+    const url = `${this.baseUrl}/social`;
+    return this.httpClient.get(url);
   }
 
-  getSocialDatabyId(id: number): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/social/' + id);
+  getSocialDatabyId(id: any): Observable<any> {
+    const url = `${this.baseUrl}/social/${id}`;
+    return this.httpClient.get(url);
   }
 
   insertSocialData(data: any): Observable<any> {
-    return this.httpClient.post('http://152.42.166.207/api/addSocial', data);
+    const url = `${this.baseUrl}/addSocial`;
+    return this.httpClient.post(url, data);
   }
 
   updateSocialData(id: any, data: any): Observable<any> {
-    return this.httpClient.put(
-      'http://152.42.166.207/api/updateSocial/' + id,
-      data
-    );
+    const url = `${this.baseUrl}/updateSocial/${id}`;
+    return this.httpClient.put(url, data);
   }
 
   deleteSocialData(id: any): Observable<any> {
-    return this.httpClient.delete(
-      'http://152.42.166.207/api/deleteSocial/' + id
-    );
+    const url = `${this.baseUrl}/deleteSocial/${id}`;
+    return this.httpClient.delete(url);
   }
 
-  //ALL SCHEDULE
-  getScheduleData(): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/schedule');
-  }
+  
 
-  getScheduleDatabyId(id: number): Observable<any> {
-    return this.httpClient.get('http://152.42.166.207/api/schedule/' + id);
-  }
+  //ALL SOCIALS
+  // getSocialData(): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/social');
+  // }
 
-  insertScheduleData(data: any): Observable<any> {
-    return this.httpClient.post('http://152.42.166.207/api/addSchedule', data);
-  }
+  // getSocialDatabyId(id: number): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/social/' + id);
+  // }
 
-  updateScheduleData(id: any, data: any): Observable<any> {
-    return this.httpClient.put(
-      'http://152.42.166.207/api/updateSchedule/' + id,
-      data
-    );
-  }
+  // insertSocialData(data: any): Observable<any> {
+  //   return this.httpClient.post('http://152.42.166.207/api/addSocial', data);
+  // }
 
-  deleteScheduleData(id: any): Observable<any> {
-    return this.httpClient.delete(
-      'http://152.42.166.207/api/deleteSchedule/' + id
-    );
-  }
+  // updateSocialData(id: any, data: any): Observable<any> {
+  //   return this.httpClient.put(
+  //     'http://152.42.166.207/api/updateSocial/' + id,
+  //     data
+  //   );
+  // }
+
+  // deleteSocialData(id: any): Observable<any> {
+  //   return this.httpClient.delete(
+  //     'http://152.42.166.207/api/deleteSocial/' + id
+  //   );
+  // }
+
+  // //ALL SCHEDULE
+  // getScheduleData(): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/schedule');
+  // }
+
+  // getScheduleDatabyId(id: number): Observable<any> {
+  //   return this.httpClient.get('http://152.42.166.207/api/schedule/' + id);
+  // }
+
+  // insertScheduleData(data: any): Observable<any> {
+  //   return this.httpClient.post('http://152.42.166.207/api/addSchedule', data);
+  // }
+
+  // updateScheduleData(id: any, data: any): Observable<any> {
+  //   return this.httpClient.put(
+  //     'http://152.42.166.207/api/updateSchedule/' + id,
+  //     data
+  //   );
+  // }
+
+  // deleteScheduleData(id: any): Observable<any> {
+  //   return this.httpClient.delete(
+  //     'http://152.42.166.207/api/deleteSchedule/' + id
+  //   );
+  // }
 
   getUserDetails(id: number): Observable<any> {
     return this.httpClient.get('http://152.42.166.207/api/user/' + id);
