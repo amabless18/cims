@@ -78,13 +78,21 @@ export class EditUserComponent {
       this.users.pic = null;
     }
 
-  updateUser(){
-    this.dataService.updateUserData(this.id, this.users).subscribe((res) => {
-    });
-
-    this.router.navigate(['/crafted/account/user']);
+    updateUser() {
+      // Display a confirmation dialog before updating user data
+      const confirmed = confirm('Are you sure you want to save changes?');
     
-  }
+      // Proceed with updating user data if user confirms
+      if (confirmed) {
+        this.dataService.updateUserData(this.id, this.users).subscribe((res) => {
+          // Handle success response if needed
+        });
+    
+        // Navigate to the dashboard after updating user data
+        this.router.navigate(['/dashboard']);
+      }
+    }
+    
 
   getAll(){
     this.dataService.getUserDatabyId(this.id).subscribe((res) => {
@@ -95,13 +103,13 @@ export class EditUserComponent {
     });
   }
 
-  openCoachView(id: any) {
-    this.router.navigate(['/crafted/account/user', id, 'students']);
+  // openCoachView(id: any) {
+  //   this.router.navigate(['/crafted/account/user', id, 'students']);
     
-  }
+  // }
 
   close(){
-    this.router.navigate(['/crafted/account/user']);
+    this.router.navigate(['/dashboard']);
   }
 
  saveSettings(){

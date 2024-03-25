@@ -66,6 +66,20 @@
                 <span class="text-muted fw-bold d-block fs-7">Level</span>
                 <span class="text-dark fw-bolder d-block fs-5">{{item.level}}</span>
               </td>
+              <td>
+                <button (click)="openEditView(item.id)"
+              type="button"
+              class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-1
+              "
+            >
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
+                class="svg-icon svg-icon-3"
+              ></span>
+          </button>
+              </td>
             </tr>
             
 

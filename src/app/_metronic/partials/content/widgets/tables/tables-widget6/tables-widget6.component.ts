@@ -1,6 +1,9 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
-import { AuthService, UserModel, UserType } from 'src/app/modules/auth';
+import { EditUserComponent } from 'src/app/modules/account/user/edituser.component';
+import { AuthService, UserType } from 'src/app/modules/auth';
 import { DataService } from 'src/app/modules/service/data.service';
 
 type Tabs =
@@ -22,6 +25,8 @@ export class TablesWidget6Component implements OnInit {
     private auth: AuthService,
     private dataService: DataService,
     private cdr: ChangeDetectorRef,
+    private modalService: NgbModal,
+    private router: Router,
   ) { }
 
   activeTab: Tabs = 'kt_table_widget_6_tab_1';
@@ -53,5 +58,10 @@ export class TablesWidget6Component implements OnInit {
         );
       }
     });
+  }
+
+  openEditView(id: any) {
+    this.router.navigate(['/crafted/account/user', id]);
+    
   }
 }
