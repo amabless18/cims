@@ -12,6 +12,7 @@ export class UserModel extends AuthModel {
   level: any;
   pic: string;
   admin_pic: any;
+  coach_id: any;
   coach_name: any;
   roles: any;
   userType: any;
