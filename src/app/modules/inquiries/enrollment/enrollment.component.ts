@@ -56,7 +56,7 @@ export class EnrollmentComponent implements OnInit {
   search() {
     if (this.appointmentNumber) {
       // Navigate to the user/enrollment/:number route
-      this.router.navigate(['/crafted/pages/inquiries/enrollment', this.appointmentNumber])
+      this.router.navigate(['/cims/crafted/pages/inquiries/enrollment', this.appointmentNumber])
       .then(() => {
         window.location.reload();
       });
