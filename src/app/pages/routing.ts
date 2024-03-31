@@ -37,7 +37,7 @@ const Routing: Routes = [
       import('../modules/credential/credentials.module').then((m) => m.CredentialsModule),
   },
   {
-    path: 'cims/crafted/pages/inquiries',
+    path: 'crafted/pages/inquiries',
     loadChildren: () =>
       import('../modules/inquiries/inquiries.module').then((m) => m.InquiriesModule),
   },
