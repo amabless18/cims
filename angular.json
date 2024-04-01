@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "baseHref": "/cims/",
+            "baseHref": "/amabless/cims/",
             "outputPath": "dist",
             "allowedCommonJsDependencies": [
               "object-path",
