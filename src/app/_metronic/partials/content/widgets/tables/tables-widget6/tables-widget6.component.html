@@ -2,10 +2,22 @@
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
     <span class="card-label fw-bolder fs-3 mb-1">Students List</span>
-    <span class="text-muted mt-1 fw-bold fs-7">Kindly observe your students</span>
+    <span class="text-muted mt-1 fw-bold fs-7"
+      >Kindly observe your students</span
+    >
   </h3>
   <div class="card-toolbar">
-    
+    <!-- begin::Menu -->
+    &nbsp;
+    <a
+      class="btn btn-sm btn-primary cursor-pointer"
+      data-bs-toggle="modal"
+      data-bs-target="#kt_modal_create_app"
+      id="kt_toolbar_primary_button"
+      (click)="print()"
+    >
+      Print
+    </a>
   </div>
 </div>
 <!-- end::Header -->
@@ -17,26 +29,16 @@
       class="tab-pane fade"
       [ngClass]="activeClass('kt_table_widget_6_tab_1')"
       id="kt_table_widget_6_tab_1"
+      id="printContent"
     >
       <!-- begin::Table container -->
       <div class="table-responsive">
         <!-- begin::Table -->
         <table class="table align-middle gs-0 gy-3">
-          <!-- begin::Table head -->
-          <thead>
-            <tr>
-              <th class="p-0 w-50px"></th>
-              <th class="p-0 min-w-150px"></th>
-              <th class="p-0 min-w-140px"></th>
-              <th class="p-0 min-w-120px"></th>
-            </tr>
-          </thead>
-          <!-- end::Table head -->
-          <!-- begin::Table body -->
-    
+
           <tbody>
             <tr *ngFor="let item of students">
-              <td>
+              <td class="user-icon">
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label">
                     <img
@@ -48,42 +50,35 @@
                 </div>
               </td>
               <td>
-                <a
-                  href=""
-                  class="text-dark fw-bolder text-hover-primary mb-1 fs-6"
-                >
-                  {{item.firstname}}&nbsp;{{item.middlename}}&nbsp;{{item.lastname}}
-                </a>
-                <span class="text-muted fw-bold d-block"
-                  >Name</span
-                >
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6"></p>
+                {{ item.firstname }}&nbsp;{{ item.middlename }}&nbsp;{{
+                  item.lastname
+                }}
+                <span class="text-muted fw-bold d-block">Name</span>
               </td>
               <td>
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6"></p>
+                {{ item.course }}
                 <span class="text-muted fw-bold d-block fs-7">Course</span>
-                <span class="text-dark fw-bolder d-block fs-5">{{item.course}}</span>
               </td>
               <td>
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6"></p>
+                {{ item.level }}
                 <span class="text-muted fw-bold d-block fs-7">Level</span>
-                <span class="text-dark fw-bolder d-block fs-5">{{item.level}}</span>
               </td>
-              <td>
-                <button (click)="openEditView(item.id)"
-              type="button"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-          </button>
+              <td class="user-icon">
+                <button
+                  (click)="openEditView(item.id)"
+                  type="button"
+                  class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
+                >
+                  <span
+                    [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
+                    class="svg-icon svg-icon-3"
+                  ></span>
+                </button>
               </td>
             </tr>
-            
-
-            
           </tbody>
           <!-- end::Table body -->
         </table>
@@ -126,10 +121,7 @@
                 </div>
               </td>
               <td>
-                <a
-                  
-                  class="text-dark fw-bolder text-hover-primary mb-1 fs-6"
-                >
+                <a class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
                   Jessie Clarcson
                 </a>
                 <span class="text-muted fw-bold d-block">HTML, CSS Coding</span>
@@ -144,9 +136,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -188,9 +178,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -234,9 +222,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -307,9 +293,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -351,9 +335,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -397,9 +379,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
@@ -443,9 +423,7 @@
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <span
                     [inlineSVG]="
