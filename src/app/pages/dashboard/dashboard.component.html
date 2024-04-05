@@ -120,7 +120,6 @@
           color="info"
           iconColor="white"
           [title]="coachFullName"
-          
           description="Coach"
         ></app-stats-widget5>
       </div>
@@ -136,7 +135,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="_user.course === 'Guitar'">
+  <div *ngIf="_user.course === 'Guitar' && _user.userType === 'student'">
     <h1>Guitar</h1>
     <!DOCTYPE html>
     <html lang="en">
@@ -220,16 +219,19 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Learning basic guitar techniques such as fretting, strumming, and picking.
+                  • Learning basic guitar techniques such as fretting,
+                  strumming, and picking.
                 </p>
                 <p>
-                  •	Understanding how to read guitar tablature and chord diagrams.
+                  • Understanding how to read guitar tablature and chord
+                  diagrams.
                 </p>
                 <p>
-                  •	Practicing fundamental chords and simple chord progressions.
+                  • Practicing fundamental chords and simple chord progressions.
                 </p>
                 <p>
-                  •	Developing rhythm skills through strumming exercises and playing along with songs.
+                  • Developing rhythm skills through strumming exercises and
+                  playing along with songs.
                 </p>
               </div>
             </div>
@@ -239,16 +241,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Building on basic techniques with more complex chord shapes and fingerpicking patterns.
+                  • Building on basic techniques with more complex chord shapes
+                  and fingerpicking patterns.
                 </p>
                 <p>
-                  •	Exploring scales and beginning to understand improvisation and soloing.
+                  • Exploring scales and beginning to understand improvisation
+                  and soloing.
                 </p>
                 <p>
-                  •	Studying music theory concepts such as keys, scales, and chord progressions.
+                  • Studying music theory concepts such as keys, scales, and
+                  chord progressions.
                 </p>
                 <p>
-                  •	Playing along with backing tracks or simple jam sessions to develop musicality.
+                  • Playing along with backing tracks or simple jam sessions to
+                  develop musicality.
                 </p>
               </div>
             </div>
@@ -258,16 +264,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Refining technique and developing speed, accuracy, and control.
+                  • Refining technique and developing speed, accuracy, and
+                  control.
                 </p>
                 <p>
-                  •	Expanding chord vocabulary and mastering barre chords and power chords.
+                  • Expanding chord vocabulary and mastering barre chords and
+                  power chords.
                 </p>
                 <p>
-                  •	Developing fluency in scales and modes for improvisation and soloing.
+                  • Developing fluency in scales and modes for improvisation and
+                  soloing.
                 </p>
                 <p>
-                  •	Exploring different guitar styles such as rock, blues, folk, jazz, and classical.
+                  • Exploring different guitar styles such as rock, blues, folk,
+                  jazz, and classical.
                 </p>
               </div>
             </div>
@@ -277,14 +287,17 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Mastering advanced techniques such as sweep picking, tapping, and advanced fingerstyle.
+                  • Mastering advanced techniques such as sweep picking,
+                  tapping, and advanced fingerstyle.
                 </p>
-                <p>•	Developing a personal style and voice as a guitarist.</p>
+                <p>• Developing a personal style and voice as a guitarist.</p>
                 <p>
-                  •	Studying advanced music theory concepts and applying them to composition and improvisation.
+                  • Studying advanced music theory concepts and applying them to
+                  composition and improvisation.
                 </p>
                 <p>
-                  •	Preparing for professional opportunities such as studio recording sessions, live performances, or auditions.
+                  • Preparing for professional opportunities such as studio
+                  recording sessions, live performances, or auditions.
                 </p>
               </div>
             </div>
@@ -294,14 +307,17 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Achieving mastery of the guitar as an instrument, both technically and musically.
+                  • Achieving mastery of the guitar as an instrument, both
+                  technically and musically.
                 </p>
                 <p>
-                  •	Pushing artistic boundaries and exploring innovative approaches to playing and composition.
+                  • Pushing artistic boundaries and exploring innovative
+                  approaches to playing and composition.
                 </p>
-                <p>•	Serving as a mentor and educator to other guitarists.</p>
+                <p>• Serving as a mentor and educator to other guitarists.</p>
                 <p>
-                  •	Continuing to grow and evolve as a musician through lifelong learning and artistic exploration.
+                  • Continuing to grow and evolve as a musician through lifelong
+                  learning and artistic exploration.
                 </p>
               </div>
             </div>
@@ -311,7 +327,7 @@
     </html>
   </div>
 
-  <div *ngIf="_user.course === 'Drums'">
+  <div *ngIf="_user.course === 'Drums' && _user.userType === 'student'">
     <h1>Drums</h1>
     <!DOCTYPE html>
     <html lang="en">
@@ -395,16 +411,18 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Learning basic drumming techniques such as grip, posture, and coordination.
+                  • Learning basic drumming techniques such as grip, posture,
+                  and coordination.
                 </p>
                 <p>
-                  •	Understanding rhythm notation and basic drumming patterns.
+                  • Understanding rhythm notation and basic drumming patterns.
                 </p>
                 <p>
-                  •	Developing foundational skills through exercises focusing on timing, dynamics, and control.
+                  • Developing foundational skills through exercises focusing on
+                  timing, dynamics, and control.
                 </p>
                 <p>
-                  •	Playing simple rhythms along with music tracks or metronome.
+                  • Playing simple rhythms along with music tracks or metronome.
                 </p>
               </div>
             </div>
@@ -414,16 +432,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Building on basic techniques with more complex rhythms and drum fills.
+                  • Building on basic techniques with more complex rhythms and
+                  drum fills.
                 </p>
                 <p>
-                  •	Developing independence between limbs through coordination exercises and rudimental studies.
+                  • Developing independence between limbs through coordination
+                  exercises and rudimental studies.
                 </p>
                 <p>
-                  •	Exploring different drumming styles such as rock, jazz, funk, and Latin.
+                  • Exploring different drumming styles such as rock, jazz,
+                  funk, and Latin.
                 </p>
                 <p>
-                  •	Beginning to play along with songs and understanding the role of the drummer in a band.
+                  • Beginning to play along with songs and understanding the
+                  role of the drummer in a band.
                 </p>
               </div>
             </div>
@@ -433,16 +455,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Refining technique and mastering more challenging rhythms and drumming concepts.
+                  • Refining technique and mastering more challenging rhythms
+                  and drumming concepts.
                 </p>
                 <p>
-                  •	Improving speed, accuracy, and endurance through advanced exercises and drills.
+                  • Improving speed, accuracy, and endurance through advanced
+                  exercises and drills.
                 </p>
                 <p>
-                  •	Studying different musical genres and developing versatility as a drummer.
+                  • Studying different musical genres and developing versatility
+                  as a drummer.
                 </p>
                 <p>
-                  •	Collaborating with other musicians in ensemble settings or band rehearsals.
+                  • Collaborating with other musicians in ensemble settings or
+                  band rehearsals.
                 </p>
               </div>
             </div>
@@ -452,14 +478,16 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Mastering advanced drumming techniques such as polyrhythms, odd time signatures, and advanced drum fills.
+                  • Mastering advanced drumming techniques such as polyrhythms,
+                  odd time signatures, and advanced drum fills.
                 </p>
-                <p>•	Developing improvisational skills and soloing ability.</p>
+                <p>• Developing improvisational skills and soloing ability.</p>
                 <p>
-                  •	Exploring advanced concepts in music theory and applying them to drumming.
+                  • Exploring advanced concepts in music theory and applying
+                  them to drumming.
                 </p>
                 <p>
-                  •	Preparing for professional opportunities such as studio 
+                  • Preparing for professional opportunities such as studio
                   recording sessions, live performances, or auditions.
                 </p>
               </div>
@@ -470,25 +498,27 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Achieving mastery of the drum set as an instrument, both technically and musically.
+                  • Achieving mastery of the drum set as an instrument, both
+                  technically and musically.
                 </p>
                 <p>
-                  •	Achieving mastery of the drum set as an instrument, both technically and musically.
+                  • Achieving mastery of the drum set as an instrument, both
+                  technically and musically.
                 </p>
-                <p>•	Pushing artistic boundaries and exploring innovative approaches to drumming.</p>
                 <p>
-                  •	Serving as a mentor and educator to other drummers.
+                  • Pushing artistic boundaries and exploring innovative
+                  approaches to drumming.
                 </p>
+                <p>• Serving as a mentor and educator to other drummers.</p>
               </div>
             </div>
           </div>
         </div>
       </body>
     </html>
-
   </div>
 
-  <div *ngIf="_user.course === 'Hip-Hop'">
+  <div *ngIf="_user.course === 'Hip-Hop' && _user.userType === 'student'">
     <h1>Hip-Hop</h1>
     <!DOCTYPE html>
     <html lang="en">
@@ -572,16 +602,19 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Learning basic hip-hop movements and grooves such as body isolations, footwork, and rhythmic patterns.
+                  • Learning basic hip-hop movements and grooves such as body
+                  isolations, footwork, and rhythmic patterns.
                 </p>
                 <p>
-                  •	Understanding fundamental concepts of musicality, including beat, rhythm, and tempo.
+                  • Understanding fundamental concepts of musicality, including
+                  beat, rhythm, and tempo.
                 </p>
                 <p>
-                  •	Introduction to hip-hop culture, history, and terminology.
+                  • Introduction to hip-hop culture, history, and terminology.
                 </p>
                 <p>
-                  •	Beginning choreography exercises to develop coordination and performance skills.
+                  • Beginning choreography exercises to develop coordination and
+                  performance skills.
                 </p>
               </div>
             </div>
@@ -591,16 +624,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Building on basic movements with more complex combinations and sequences.
+                  • Building on basic movements with more complex combinations
+                  and sequences.
                 </p>
                 <p>
-                  •	Developing freestyle skills through improvisation exercises and cyphers.
+                  • Developing freestyle skills through improvisation exercises
+                  and cyphers.
                 </p>
                 <p>
-                  •	Exploring different styles within hip-hop dance such as popping, locking, and breaking.
+                  • Exploring different styles within hip-hop dance such as
+                  popping, locking, and breaking.
                 </p>
                 <p>
-                  •	Studying the role of music in hip-hop dance and how to interpret lyrics and rhythms in movement.
+                  • Studying the role of music in hip-hop dance and how to
+                  interpret lyrics and rhythms in movement.
                 </p>
               </div>
             </div>
@@ -610,16 +647,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Refining technique and adding precision to movements and transitions.
+                  • Refining technique and adding precision to movements and
+                  transitions.
                 </p>
                 <p>
-                  •	Incorporating musicality into choreography with syncopated rhythms and dynamic contrasts.
+                  • Incorporating musicality into choreography with syncopated
+                  rhythms and dynamic contrasts.
                 </p>
                 <p>
-                  •	Deepening understanding of hip-hop culture and its social and political significance.
+                  • Deepening understanding of hip-hop culture and its social
+                  and political significance.
                 </p>
                 <p>
-                  •	Collaborating with peers on group choreography projects and performances.
+                  • Collaborating with peers on group choreography projects and
+                  performances.
                 </p>
               </div>
             </div>
@@ -629,14 +670,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Mastering advanced techniques and executing complex movements with ease and confidence.
-                </p>
-                <p>•	Developing a unique artistic voice and style within hip-hop dance.</p>
-                <p>
-                  •	Exploring opportunities for professional performance, competitions, or teaching.
+                  • Mastering advanced techniques and executing complex
+                  movements with ease and confidence.
                 </p>
                 <p>
-                  •	Continuing to study and stay current with trends in hip-hop dance culture.
+                  • Developing a unique artistic voice and style within hip-hop
+                  dance.
+                </p>
+                <p>
+                  • Exploring opportunities for professional performance,
+                  competitions, or teaching.
+                </p>
+                <p>
+                  • Continuing to study and stay current with trends in hip-hop
+                  dance culture.
                 </p>
               </div>
             </div>
@@ -646,14 +693,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Achieving mastery of hip-hop dance technique, musicality, and performance skills.
+                  • Achieving mastery of hip-hop dance technique, musicality,
+                  and performance skills.
                 </p>
                 <p>
-                  •	Pushing artistic boundaries and contributing to the evolution of hip-hop dance as an art form.
+                  • Pushing artistic boundaries and contributing to the
+                  evolution of hip-hop dance as an art form.
                 </p>
-                <p>•	Serving as a mentor and leader within the hip-hop dance community.</p>
                 <p>
-                  •	Pursuing opportunities for choreography, artistic collaborations, and education at the highest level.
+                  • Serving as a mentor and leader within the hip-hop dance
+                  community.
+                </p>
+                <p>
+                  • Pursuing opportunities for choreography, artistic
+                  collaborations, and education at the highest level.
                 </p>
               </div>
             </div>
@@ -661,9 +714,10 @@
         </div>
       </body>
     </html>
-
   </div>
-  <div *ngIf="_user.course === 'Vocal Coaching'">
+  <div
+    *ngIf="_user.course === 'Vocal Coaching' && _user.userType === 'student'"
+  >
     <h1>Vocal Coaching</h1>
     <!DOCTYPE html>
     <html lang="en">
@@ -747,16 +801,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Introduction to basic vocal techniques such as posture, breathing, and vocal warm-ups.
+                  • Introduction to basic vocal techniques such as posture,
+                  breathing, and vocal warm-ups.
                 </p>
                 <p>
-                  •	Learning fundamental vocal exercises to improve pitch accuracy, tone production, and vocal range.
+                  • Learning fundamental vocal exercises to improve pitch
+                  accuracy, tone production, and vocal range.
                 </p>
                 <p>
-                  •	Developing an understanding of basic music theory concepts such as rhythm and notation.
+                  • Developing an understanding of basic music theory concepts
+                  such as rhythm and notation.
                 </p>
                 <p>
-                  •	Beginning repertoire selection with simple songs or exercises to apply learned techniques.
+                  • Beginning repertoire selection with simple songs or
+                  exercises to apply learned techniques.
                 </p>
               </div>
             </div>
@@ -766,16 +824,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Refining basic vocal techniques and building consistency in vocal production.
+                  • Refining basic vocal techniques and building consistency in
+                  vocal production.
                 </p>
                 <p>
-                  •	Expanding vocal range through exercises aimed at strengthening head voice, chest voice, and mixed voice.
+                  • Expanding vocal range through exercises aimed at
+                  strengthening head voice, chest voice, and mixed voice.
                 </p>
                 <p>
-                  •	Introduction to more complex musical concepts such as dynamics, phrasing, and expression.
+                  • Introduction to more complex musical concepts such as
+                  dynamics, phrasing, and expression.
                 </p>
                 <p>
-                  •	Exploring a broader range of musical styles and genres through repertoire selection.
+                  • Exploring a broader range of musical styles and genres
+                  through repertoire selection.
                 </p>
               </div>
             </div>
@@ -785,16 +847,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Developing greater control and flexibility in vocal production across the entire range.
+                  • Developing greater control and flexibility in vocal
+                  production across the entire range.
                 </p>
                 <p>
-                  •	Mastery of more advanced vocal exercises to address specific technical challenges.
+                  • Mastery of more advanced vocal exercises to address specific
+                  technical challenges.
                 </p>
                 <p>
-                  •	Deepening understanding of musical interpretation and expression through nuanced performance.
+                  • Deepening understanding of musical interpretation and
+                  expression through nuanced performance.
                 </p>
                 <p>
-                  •	Working on performance skills such as stage presence, communication, and connection with the audience.
+                  • Working on performance skills such as stage presence,
+                  communication, and connection with the audience.
                 </p>
               </div>
             </div>
@@ -804,14 +870,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Further refinement of vocal technique to achieve precision and agility.
-                </p>
-                <p>• Expansion of vocal repertoire to include challenging pieces that require advanced skills.</p>
-                <p>
-                  •	Exploration of advanced musical concepts such as ornamentation, modulation, and improvisation.
+                  • Further refinement of vocal technique to achieve precision
+                  and agility.
                 </p>
                 <p>
-                  •	Preparation for auditions, competitions, or advanced vocal studies.
+                  • Expansion of vocal repertoire to include challenging pieces
+                  that require advanced skills.
+                </p>
+                <p>
+                  • Exploration of advanced musical concepts such as
+                  ornamentation, modulation, and improvisation.
+                </p>
+                <p>
+                  • Preparation for auditions, competitions, or advanced vocal
+                  studies.
                 </p>
               </div>
             </div>
@@ -821,14 +893,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Mastery of advanced vocal techniques, including control over tone color, vibrato, and dynamics.
+                  • Mastery of advanced vocal techniques, including control over
+                  tone color, vibrato, and dynamics.
                 </p>
                 <p>
-                  •	Ability to perform demanding repertoire with confidence and artistry.
+                  • Ability to perform demanding repertoire with confidence and
+                  artistry.
                 </p>
-                <p>• Exploration of specialized vocal styles or techniques such as belting, coloratura, or vocal improvisation.</p>
                 <p>
-                  •	Pursuit of individual artistic goals, whether in performance, teaching, or further study at the highest level.
+                  • Exploration of specialized vocal styles or techniques such
+                  as belting, coloratura, or vocal improvisation.
+                </p>
+                <p>
+                  • Pursuit of individual artistic goals, whether in
+                  performance, teaching, or further study at the highest level.
                 </p>
               </div>
             </div>
@@ -837,8 +915,8 @@
       </body>
     </html>
   </div>
-  <div *ngIf="_user.course === 'Keyboard'">
-    <h1>Keyboard </h1>
+  <div *ngIf="_user.course === 'Keyboard' && _user.userType === 'student'">
+    <h1>Keyboard</h1>
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -921,17 +999,14 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Learning basic keyboard technique such as hand position, finger placement, and posture.
+                  • Learning basic keyboard technique such as hand position,
+                  finger placement, and posture.
                 </p>
                 <p>
-                  •	Understanding the layout of the keyboard and note names.
+                  • Understanding the layout of the keyboard and note names.
                 </p>
-                <p>
-                  •	Practicing fundamental scales, chords, and arpeggios.
-                </p>
-                <p>
-                  •	Playing simple melodies and songs using both hands.
-                </p>
+                <p>• Practicing fundamental scales, chords, and arpeggios.</p>
+                <p>• Playing simple melodies and songs using both hands.</p>
               </div>
             </div>
           </div>
@@ -940,16 +1015,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Building on basic technique with more complex hand coordination exercises.
+                  • Building on basic technique with more complex hand
+                  coordination exercises.
                 </p>
                 <p>
-                  •	Exploring different keyboard styles such as classical, jazz, pop, and contemporary.
+                  • Exploring different keyboard styles such as classical, jazz,
+                  pop, and contemporary.
                 </p>
                 <p>
-                  •	Studying music theory concepts such as harmony, rhythm, and form.
+                  • Studying music theory concepts such as harmony, rhythm, and
+                  form.
                 </p>
                 <p>
-                  •	Playing simple accompaniments and learning to read lead sheets or chord charts.
+                  • Playing simple accompaniments and learning to read lead
+                  sheets or chord charts.
                 </p>
               </div>
             </div>
@@ -959,16 +1038,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Refining technique and developing fluency in scales, chords, and arpeggios.
+                  • Refining technique and developing fluency in scales, chords,
+                  and arpeggios.
                 </p>
                 <p>
-                  •	Improving sight-reading skills and learning to play more complex music notation.
+                  • Improving sight-reading skills and learning to play more
+                  complex music notation.
                 </p>
                 <p>
-                  •	Exploring different keyboard sounds and experimenting with sound design.
+                  • Exploring different keyboard sounds and experimenting with
+                  sound design.
                 </p>
                 <p>
-                  •	Collaborating with other musicians in ensemble settings or band rehearsals.
+                  • Collaborating with other musicians in ensemble settings or
+                  band rehearsals.
                 </p>
               </div>
             </div>
@@ -978,14 +1061,17 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Mastering advanced techniques such as advanced finger independence, rapid scales, and complex rhythms.
+                  • Mastering advanced techniques such as advanced finger
+                  independence, rapid scales, and complex rhythms.
                 </p>
-                <p>•	Developing improvisational skills and soloing ability.</p>
+                <p>• Developing improvisational skills and soloing ability.</p>
                 <p>
-                  •	Studying advanced music theory concepts such as modal harmony, extended chords, and advanced harmonic progressions.
+                  • Studying advanced music theory concepts such as modal
+                  harmony, extended chords, and advanced harmonic progressions.
                 </p>
                 <p>
-                  •	Preparing for professional opportunities such as studio recording sessions, live performances, or auditions.
+                  • Preparing for professional opportunities such as studio
+                  recording sessions, live performances, or auditions.
                 </p>
               </div>
             </div>
@@ -995,14 +1081,17 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Achieving mastery of the keyboard as an instrument, both technically and musically.
+                  • Achieving mastery of the keyboard as an instrument, both
+                  technically and musically.
                 </p>
                 <p>
-                  •	Pushing artistic boundaries and exploring innovative approaches to playing and composition.
+                  • Pushing artistic boundaries and exploring innovative
+                  approaches to playing and composition.
                 </p>
-                <p>•	Serving as a mentor and educator to other keyboardists.</p>
+                <p>• Serving as a mentor and educator to other keyboardists.</p>
                 <p>
-                  •	Continuing to grow and evolve as a musician through lifelong learning and artistic exploration.
+                  • Continuing to grow and evolve as a musician through lifelong
+                  learning and artistic exploration.
                 </p>
               </div>
             </div>
@@ -1011,14 +1100,13 @@
       </body>
     </html>
   </div>
-  <div *ngIf="_user.course === 'Judo Combat'">
+  <div *ngIf="_user.course === 'Judo Combat' && _user.userType === 'student'">
     <h1>Judo Combat</h1>
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Horizontal Dropdown Column</title>
         <style>
           body {
             font-family: Arial, sans-serif;
@@ -1049,10 +1137,15 @@
             border-radius: 5px;
             border: 1px solid #ccc;
           }
-          .dropdown:hover .dropdown-content {
-            display: block;
-            transform: translateY(0); /* Reset transform on hover */
+
+          /* Media query for small screens */
+          @media screen and (max-width: 768px) {
+            .dropdown-content {
+              transform: translateX(-50%) translateY(5px);
+            }
           }
+
+          /* Media query for extra small screens */
           .dropdown-level {
             padding: 10px;
             border-bottom: 1px solid #ddd;
@@ -1095,16 +1188,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ff4922">
                 <p>
-                  •	Learning fundamental stances, footwork, and basic techniques such as punches, kicks, and blocks.
+                  • Learning fundamental stances, footwork, and basic techniques
+                  such as punches, kicks, and blocks.
                 </p>
                 <p>
-                  •	Understanding the principles of balance, distance management, and proper body mechanics.
+                  • Understanding the principles of balance, distance
+                  management, and proper body mechanics.
                 </p>
                 <p>
-                  •	Practicing basic self-defense techniques against common attacks.
+                  • Practicing basic self-defense techniques against common
+                  attacks.
                 </p>
                 <p>
-                  •	Developing physical conditioning, strength, and flexibility through basic exercises.
+                  • Developing physical conditioning, strength, and flexibility
+                  through basic exercises.
                 </p>
               </div>
             </div>
@@ -1114,16 +1211,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #ffb200">
                 <p>
-                  •	Building on basic techniques with more advanced strikes, kicks, and combinations.
+                  • Building on basic techniques with more advanced strikes,
+                  kicks, and combinations.
                 </p>
                 <p>
-                  •	Developing timing, speed, and coordination in executing techniques.
+                  • Developing timing, speed, and coordination in executing
+                  techniques.
                 </p>
                 <p>
-                  •	Learning basic throws, joint locks, and takedowns for self-defense and control.
+                  • Learning basic throws, joint locks, and takedowns for
+                  self-defense and control.
                 </p>
                 <p>
-                  •	Introduction to controlled sparring or kumite drills to simulate combat situations.
+                  • Introduction to controlled sparring or kumite drills to
+                  simulate combat situations.
                 </p>
               </div>
             </div>
@@ -1133,16 +1234,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #88b44a">
                 <p>
-                  •	Refining technique and developing fluidity and precision in movement.
+                  • Refining technique and developing fluidity and precision in
+                  movement.
                 </p>
                 <p>
-                  •	Expanding repertoire of techniques to include more complex combinations and counters.
+                  • Expanding repertoire of techniques to include more complex
+                  combinations and counters.
                 </p>
                 <p>
-                  •	Studying the principles of strategy, tactics, and situational awareness in combat scenarios.
+                  • Studying the principles of strategy, tactics, and
+                  situational awareness in combat scenarios.
                 </p>
                 <p>
-                  •	Participating in sparring sessions with increased intensity and complexity.
+                  • Participating in sparring sessions with increased intensity
+                  and complexity.
                 </p>
               </div>
             </div>
@@ -1152,14 +1257,20 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #7acdd7">
                 <p>
-                  •	Mastering advanced techniques such as advanced strikes, throws, and submissions.
-                </p>
-                <p>• Developing adaptability and the ability to adjust techniques based on opponent's movements.</p>
-                <p>
-                  •	Exploring the psychological aspects of combat, including mental focus and resilience.
+                  • Mastering advanced techniques such as advanced strikes,
+                  throws, and submissions.
                 </p>
                 <p>
-                  •	Preparation for competition or advanced training in specialized areas of combat judo karate.
+                  • Developing adaptability and the ability to adjust techniques
+                  based on opponent's movements.
+                </p>
+                <p>
+                  • Exploring the psychological aspects of combat, including
+                  mental focus and resilience.
+                </p>
+                <p>
+                  • Preparation for competition or advanced training in
+                  specialized areas of combat judo karate.
                 </p>
               </div>
             </div>
@@ -1169,14 +1280,19 @@
             <div class="dropdown-content">
               <div class="description" style="background-color: #9d92ec">
                 <p>
-                  •	Achieving mastery of combat judo karate techniques, principles, and strategies.
+                  • Achieving mastery of combat judo karate techniques,
+                  principles, and strategies.
                 </p>
                 <p>
-                  •	Pushing personal boundaries and exploring innovative approaches to combat training.
+                  • Pushing personal boundaries and exploring innovative
+                  approaches to combat training.
                 </p>
-                <p>•	Serving as a mentor and instructor to other practitioners.</p>
                 <p>
-                  •	Continuing to evolve and refine skills through lifelong practice and study.
+                  • Serving as a mentor and instructor to other practitioners.
+                </p>
+                <p>
+                  • Continuing to evolve and refine skills through lifelong
+                  practice and study.
                 </p>
               </div>
             </div>
@@ -1186,6 +1302,26 @@
     </html>
   </div>
 
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
   <div class="col-xxl-4" *ngIf="_user.userType === 'coach'">
     <div class="row g-5 g-xl-8">
