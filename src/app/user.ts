@@ -6,6 +6,7 @@ export class User {
     email:any;
     password:any;
     pic:any;
+    phone:any;
     userType: any;
     level:any;
     branch:any;
