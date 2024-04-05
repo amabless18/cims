@@ -47,7 +47,7 @@
                   cursor-pointer
                 "
               >
-              {{ _user.firstname }}&nbsp;{{ _user.lastname }}
+              {{ _user.firstname }}&nbsp;{{ _user.middlename }}&nbsp;{{ _user.lastname }}
               </a>
               <a class="cursor-pointer">
                 <span
@@ -76,7 +76,7 @@
                   "
                   class="svg-icon svg-icon-4 me-1"
                 ></span>
-                {{ _user.roles }}
+                {{ _user.userType }}
               </a>
               <a
                 class="
@@ -131,33 +131,6 @@
 
                 <div class="fw-bold fs-6 text-gray-400">Level</div>
               </div>
-
-              <div
-                class="
-                  border border-gray-300 border-dashed
-                  rounded
-                  min-w-125px
-                  py-3
-                  px-4
-                  me-6
-                  mb-3
-                "
-              >
-                <div class="d-flex align-items-center">
-                  <span
-                    [inlineSVG]="
-                      './assets/media/icons/duotune/arrows/arr066.svg'
-                    "
-                    class="svg-icon svg-icon-3 svg-icon-success me-2"
-                  ></span>
-                  <div class="fs-2 fw-bolder">{{ _user.session }}</div>
-                </div>
-
-                <div class="fw-bold fs-6 text-gray-400">Session</div>
-              </div>
-
-              
-
               
             </div>
           </div>
@@ -184,6 +157,15 @@
             routerLinkActive="active"
           >
             Overview
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-active-primary me-6"
+            routerLink="/crafted/account/user-profile/settings"
+            routerLinkActive="active"
+          >
+            Settings
           </a>
         </li>
       </ul>
