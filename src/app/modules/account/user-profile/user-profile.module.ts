@@ -11,6 +11,7 @@ import { NotificationsComponent } from './settings/forms/notifications/notificat
 import { SignInMethodComponent } from './settings/forms/sign-in-method/sign-in-method.component';
 import { DropdownMenusModule, WidgetsModule } from '../../../_metronic/partials';
 import { UserProfileRoutingModule } from './user-profile-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { UserProfileRoutingModule } from './user-profile-routing.module';
     CommonModule,
     UserProfileRoutingModule,
     InlineSVGModule,
+    FormsModule,
     DropdownMenusModule,
     WidgetsModule,
   ],

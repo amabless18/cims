@@ -43,7 +43,7 @@ export class UserComponent {
 
   }
 
-  ngOnInit(): void{
+  ngOnInit(id:any, data:any): void{
     this.getAll();
     this.user$ = this.auth.currentUserSubject.asObservable();
     // Refresh data every 5 seconds (adjust the interval as needed)

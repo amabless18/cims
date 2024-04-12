@@ -12,25 +12,8 @@
     </div>
   </div>
   <div id="kt_account_profile_details" class="collapse show">
-    <form novalidate="" class="form">
+    <form (ngSubmit)="updateUser()" novalidate="" class="form">
       <div class="card-body border-top p-9">
-        <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6">Avatar</label>
-          <div class="col-lg-8">
-            <div
-              class="image-input image-input-outline"
-              data-kt-image-input="true"
-              [style.background-image]="'url(./assets/media/avatars/blank.png'"
-            >
-              <input
-                class="image-input-wrapper w-125px h-125px" type="file"
-                [style.background-image]="
-                  'url(./assets/media/avatars/banner.png'
-                "
-              >
-            </div>
-          </div>
-        </div>
         <div class="row mb-6">
           <label class="col-lg-4 col-form-label required fw-bold fs-6"
             >Full Name</label
