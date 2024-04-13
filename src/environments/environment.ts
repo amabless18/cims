@@ -7,7 +7,7 @@ export const environment = {
   appVersion: 'v8.0.25',
   USERDATA_KEY: 'authf649fc9a5f55',
   isMockEnabled: true,
-  apiUrl: 'https://gfi-edu.com/cims/public/api', //http://152.42.166.207/api
+  apiUrl: 'https://amabless.com/database/public/api', //http://152.42.166.207/api
   appThemeName: 'Metronic',
   appHTMLIntegration: 'https://preview.keenthemes.com/metronic8/demo1/documentation/base/helpers/flex-layouts.html',
   appPurchaseUrl: 'https://1.envato.market/EA4JP',

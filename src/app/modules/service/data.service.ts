@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private baseUrl = 'https://gfi-edu.com/cims/public/api';
+  private baseUrl = 'https://amabless.com/database/public/api';
 
-  private apiUrlCoaches = 'https://gfi-edu.com/cims/public/api/courses';
+  private apiUrlCoaches = 'https://amabless.com/database/public/api/courses';
 
-  private apiUrlStudents = 'https://gfi-edu.com/cims/public/api/user';
+  private apiUrlStudents = 'https://amabless.com/database/public/api/user';
 
   //private apiFilter = 'http://152.42.166.207/api/users/filter';
 
