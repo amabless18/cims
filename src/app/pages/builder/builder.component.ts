@@ -35,5 +35,5 @@ export class BuilderComponent implements OnInit {
     location.reload();
   }
 
-  //This code is already pushed
+  //this is was changed
 }
