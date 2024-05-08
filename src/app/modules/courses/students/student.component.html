@@ -4,13 +4,28 @@
   <h3 class="card-title align-items-start flex-column">
     <span class="card-label fw-bolder fs-3 mb-1">Students</span>
   </h3>
-  
+  <div class="card-toolbar">
+    <!-- begin::Menu -->
+      &nbsp;
+    <a
+      class="btn btn-sm btn-primary cursor-pointer"
+      data-bs-toggle="modal"
+      data-bs-target="#kt_modal_create_app"
+      id="kt_toolbar_primary_button"
+      (click)="print()"      
+    >
+      Print
+    </a>
+    <!-- begin::Menu 2 -->
+    <!-- end::Menu 2 -->
+    <!-- end::Menu -->
+  </div>
 </div>
 <!-- end::Header -->
 <!-- begin::Body -->
 <div class="card-body py-3">
   <!-- begin::Table container -->
-  <div class="table-responsive">
+  <div class="table-responsive" id="printContent">
     <!-- begin::Table -->
     <table
       class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3"
@@ -24,7 +39,7 @@
           <th class="min-w-150px">Last Name</th>
           <th class="min-w-150px">Status</th>
           <th class="min-w-150px">Date Enrolled</th>
-          <th class="min-w-100px text-end">Actions</th>
+          <th class="min-w-100px text-end" id="printdisplay">Actions</th>
         </tr>
       </thead>
       <!-- end::Table head -->
@@ -49,7 +64,7 @@
           <td class="text-dark fw-bolder text-hover-primary fs-6">
             {{item.created_at | date:'longDate' }}
           </td>
-          <td class="text-end">
+          <td class="text-end" id="printdisplay">
             <button (click)="openEditView(item.id)"
               type="button"
               class="
@@ -62,7 +77,7 @@
                 class="svg-icon svg-icon-3"
               ></span>
           </button>
-            <div class="text-end">
+            <div class="text-end" id="printdisplay">
               <button
               type="button" (click)="deleteData(item.id)"
               class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"

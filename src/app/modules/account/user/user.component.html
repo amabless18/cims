@@ -4,26 +4,6 @@
   <h3 class="card-title align-items-start flex-column">
     <span class="card-label fw-bolder fs-3 mb-1">Users</span>
   </h3>
-  <div class="row">
-    <div class="col-md-6">
-      <label for="userType" class="form-label">UserType:</label>
-      <select id="userType" class="form-select" [(ngModel)]="filterOptions.userType">
-        <option value="Coach">Coach</option>
-        <option value="Student">Student</option>
-      </select>
-    </div>
-    <div class="col-md-6">
-      <label for="course" class="form-label">Course:</label>
-      <select id="course" class="form-select" [(ngModel)]="filterOptions.course">
-        <option value="Vocal Coaching">Vocal Coaching</option>
-        <option value="Hip hop">Hip hop</option>
-        <option value="Guitar">Guitar</option>
-        <option value="Drums">Drums</option>
-        <option value="Keyboard">Keyboard</option>
-        <option value="Combat">Combat</option>
-      </select>
-    </div>
-  </div>
   <div class="card-toolbar">
     <!-- begin::Menu -->
       &nbsp;
@@ -36,7 +16,16 @@
     >
       Create
     </a>
-
+    &nbsp;
+    <a
+      class="btn btn-sm btn-secondary cursor-pointer"
+      data-bs-toggle="modal"
+      data-bs-target="#kt_modal_create_app"
+      id="kt_toolbar_primary_button"
+      (click)="print()"      
+    >
+      Print
+    </a>
     <!-- begin::Menu 2 -->
     <!-- end::Menu 2 -->
     <!-- end::Menu -->
@@ -45,7 +34,7 @@
 </div>
 <!-- end::Header -->
 <!-- begin::Body -->
-<div class="card-body py-3">
+<div class="card-body py-3" id="printContent">
   <!-- begin::Table container -->
   <div class="table-responsive">
     <!-- begin::Table -->
@@ -55,21 +44,21 @@
       <!-- begin::Table head -->
       <thead>
         <tr class="fw-bolder text-muted">
-          <th class="min-w-150px">Avatar</th>
+          <th class="min-w-150px" id="printdisplay">Avatar</th>
           <th class="min-w-150px">Fullname</th>
           <th class="min-w-140px">Email</th>
           <th class="min-w-120px">Course</th>
           <th class="min-w-120px">Level</th>
           <th class="min-w-120px">UserType</th>
           <th class="min-w-120px">Date registered</th>
-          <th class="min-w-100px text-end">Actions</th>
+          <th class="min-w-100px text-end" id="printdisplay">Actions</th>
         </tr>
       </thead>
       <!-- end::Table head -->
       <!-- begin::Table body -->
       <tbody>
-        <tr *ngFor="let item of user | filter:filterOptions | search:searchTerm">
-          <td class="symbol symbol-50px me-5">
+        <tr *ngFor="let item of user | filter:filterOptions | search:searchTerm" >
+          <td class="symbol symbol-50px me-5" id="printdisplay">
             <img [src]="item.pic">
           </td>          
           <td class="text-dark fw-bolder text-hover-primary fs-6">
@@ -89,7 +78,7 @@
           <td class="text-dark fw-bolder text-hover-primary fs-6">
             {{item.date_reserved}}
           </td>
-          <td class="text-end">
+          <td class="text-end" id="printdisplay">
             <button (click)="openEditView(item.id)"
               type="button"
               class="
