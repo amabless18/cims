@@ -18,6 +18,16 @@ export class DataService {
     
   }
 
+  forgotPassword(email: any): Observable<any> {
+    const url = `${this.baseUrl}/forgot-password`;
+    return this.httpClient.post(url, email);
+  }
+
+  resetPassword(token: any, email: any): Observable<any> {
+    const url = `${this.baseUrl}/reset-password`;
+    return this.httpClient.post(url, token, email);
+  }
+
   getStudentsForLoggedInCoach(): Observable<any> {
     const url = `${this.baseUrl}/coach/students`;
     return this.httpClient.get(url);
