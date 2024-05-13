@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Subscription, Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { ConfirmPasswordValidator } from './confirm-password.validator';
 import { UserModel } from '../../models/user.model';
 import { first } from 'rxjs/operators';
+import { DataService } from 'src/app/modules/service/data.service';
 
 @Component({
   selector: 'app-registration',
@@ -16,6 +17,9 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   registrationForm: FormGroup;
   hasError: boolean;
   isLoading$: Observable<boolean>;
+  token: string;
+  password: string;
+  confirmPassword: string;
 
   // private fields
   private unsubscribe: Subscription[] = []; // Read more: => https://brianflove.com/2016/12/11/anguar-2-unsubscribe-observables/
@@ -23,13 +27,16 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute, 
+    private dataService: DataService
   ) {
     this.isLoading$ = this.authService.isLoading$;
     // redirect to home if already logged in
     if (this.authService.currentUserValue) {
       this.router.navigate(['/']);
     }
+    this.token = this.route.snapshot.queryParams['token'];
   }
 
   ngOnInit(): void {
@@ -138,6 +145,12 @@ export class RegistrationComponent implements OnInit, OnDestroy {
         }
       });
     this.unsubscribe.push(registrationSubscr);
+  }
+
+  resetPassword() {
+    this.dataService.resetPassword(this.token, this.password).subscribe(() => {
+      this.router.navigate(['/login']);
+    });
   }
 
   ngOnDestroy() {
